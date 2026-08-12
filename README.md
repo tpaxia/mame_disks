@@ -38,3 +38,15 @@ mame m20 \
 ```
 
 Use working copies of the images if you want to keep these originals pristine.
+
+## Olivetti M40 — DCOS 8.4 diagnostics
+
+The `m40_diagnostics` folder contains the nine bootable field-diagnostic disks:
+`A.IMD` through `H.IMD`, plus the reduced `R.IMD` set. Background and operating
+details are in [tpaxia/l1_m40](https://github.com/tpaxia/l1_m40).
+
+For example, boot disk A with:
+
+```sh
+mame m40 -flop1 /path/to/mame_disks/m40_diagnostics/A.IMD
+```
