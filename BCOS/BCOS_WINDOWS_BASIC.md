@@ -155,8 +155,8 @@ mame.exe m40 -window -ramsize 2048K -flop1 "work\bcos\CONFIG.imd" -flop2 "work\b
 2. Choose a password and write it down. Use **Shift** for uppercase letters.
 3. Submit fields with **keypad Enter** and select **C** to continue.
 4. If asked for the system/storage type, select **M40, floppy-only / mono FDU**.
-5. Include **BASIC** and its editor/program-preparation support. Keep the
-   other default options unless you need a different configuration.
+5. On the software options screens, select **all available options** for the
+   complete system, not just BASIC. This matches the supplied LOAD/RUN system.
 6. At the national keyboard list, select **13 — USA-ASCII** using keypad digits.
 7. When asked for the drive containing the keyboard files, enter **FD2** and
    press keypad Enter. Use Shift for F and D, then release Shift for keypad2.
