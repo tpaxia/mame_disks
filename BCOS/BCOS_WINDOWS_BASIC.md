@@ -22,7 +22,13 @@ Use a PC keyboard with a numeric keypad. Open **Command Prompt** in the
 folder containing `mame.exe`. If your executable is named `m40.exe`, use
 that name instead of `mame.exe` in the commands below.
 
-## Open the MAME menu
+## Quick introduction to MAME's M40 controls
+
+This section explains the menus, status bar, floppy drives and keyboard controls
+you will use. It is a reference, not the start of the setup procedure.
+When you are ready to begin, go to [1. Prepare working disks](#1-prepare-working-disks).
+
+### Open the MAME menu
 
 1. Press **Scroll Lock** to enable MAME's controls.
 2. Press **Tab** to open the menu. Use the arrow keys and **main Enter**.
@@ -34,7 +40,7 @@ Scroll Lock is the normal Windows UI-toggle key. **F12 is not the UI toggle**:
 it takes a screenshot while MAME controls are enabled, and operates BCOS RUN
 while they are disabled. See [MAME's keyboard controls](https://docs.mamedev.org/usingmame/defaultkeys.html).
 
-## Set floppy boot and read the status bar
+### Set floppy boot and read the status bar
 
 1. Click **HD/FLOPPY** in the status bar until it shows **FLOPPY**.
 2. Leave **K1, K2 and K3** at **NORMAL**. Click a switch's label to cycle
@@ -52,7 +58,7 @@ The four lamps are **READY, L1, L2 and SHIFT**. BCOS controls them; READY
 does not have to stay lit. **L2 lights when TEST mode is enabled.**
 The lamps are indicators, not clickable switches.
 
-## Load or change a floppy
+### Load or change a floppy
 
 **flop1 is BCOS FD1; flop2 is BCOS FD2.**
 
@@ -69,7 +75,7 @@ The lamps are indicators, not clickable switches.
 Always eject before loading the replacement. Waiting in a paused menu does
 not count as the empty-drive interval.
 
-## Keys to use in BCOS
+### Keys to use in BCOS
 
 Use the normal QWERTY letter positions on your PC. **Main Enter and keypad
 Enter are different keys.**
