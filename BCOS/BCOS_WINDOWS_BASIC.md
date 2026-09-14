@@ -24,35 +24,34 @@ that name instead of `mame.exe` in the commands below.
 
 ## Quick introduction to MAME's M40 controls
 
-This section explains the menus, status bar, floppy drives and keyboard controls
-you will use. It is a reference, not the start of the setup procedure.
-When you are ready to begin, go to [1. Prepare working disks](#1-prepare-working-disks).
+A short reference for the controls used below. The setup procedure starts at
+[1. Prepare working disks](#1-prepare-working-disks).
 
 ### Open the MAME menu
 
-1. Press **Scroll Lock** to enable MAME's controls.
+MAME normally starts ready for BCOS typing. Use the following sequence when
+you need its menus:
+
+1. Press **Scroll Lock**. The message should say **UI controls enabled**.
 2. Press **Tab** to open the menu. Use the arrow keys and **main Enter**.
 3. When finished, close the menu with **Tab**.
 4. Press **Scroll Lock** again. Check that **UI controls disabled** appears
    before typing into BCOS.
 
-Scroll Lock is the normal Windows UI-toggle key. **F12 is not the UI toggle**:
-it takes a screenshot while MAME controls are enabled, and operates BCOS RUN
-while they are disabled. See [MAME's keyboard controls](https://docs.mamedev.org/usingmame/defaultkeys.html).
+Only toggle back if you enabled the controls. Clicking the status-bar switches
+does not require Scroll Lock. If controls are already enabled, start at step 2.
+
+On Windows, **Scroll Lock** toggles the menus' keyboard controls. **F12** is
+BCOS RUN during normal typing, or screenshot capture with MAME controls enabled.
 
 ### Set floppy boot and read the status bar
 
-1. Click **HD/FLOPPY** in the status bar until it shows **FLOPPY**.
-2. Leave **K1, K2 and K3** at **NORMAL**. Click a switch's label to cycle
-   its position if needed.
-3. If you changed the boot selector, enable MAME controls with **Scroll Lock**
-   and press **Shift+F3** to restart. Do not reset while a disk is being written.
-4. Disable MAME controls with **Scroll Lock** before typing into BCOS.
+Click **HD/FLOPPY** to change the boot device. Use **FLOPPY** for this guide.
+Leave **K1, K2 and K3** at **NORMAL**; click a label to change its position.
 
-The bar below the screen should show **FLOPPY** and **K1/K2/K3: NORMAL**.
-Click **FLOPPY** to select **HD**, or **HD** to select **FLOPPY**.
-Use FLOPPY for this guide. You do not need to open Machine Configuration
-to change these switches.
+If you change the boot device after startup, restart the machine: press
+**Scroll Lock**, **Shift+F3**, then **Scroll Lock** again. This assumes you
+were in normal BCOS typing mode. Do not restart during a disk write.
 
 The four lamps are **READY, L1, L2 and SHIFT**. BCOS controls them; READY
 does not have to stay lit. **L2 lights when TEST mode is enabled.**
@@ -62,18 +61,19 @@ The lamps are indicators, not clickable switches.
 
 **flop1 is BCOS FD1; flop2 is BCOS FD2.**
 
-1. Open **Tab → File Manager** and select the drive.
-2. To load a disk, select its image file. Choose **Read-write** for a working
-   disk if asked.
-3. To change disks, first select the empty-slot/unload entry to eject it.
-4. Close the menu, disable MAME controls and let the machine run for at least
-   **two seconds with the drive empty**.
-5. Return to File Manager and load the replacement in the same drive.
-6. Close the menu, disable MAME controls and wait about **three seconds**
-   before answering the BCOS prompt.
+To load an empty drive, open the MAME menu as described above, select
+**File Manager**, choose the drive and select the image. Choose **Read-write**
+for a working disk if asked, then return to BCOS using the menu-closing steps above.
 
-Always eject before loading the replacement. Waiting in a paused menu does
-not count as the empty-drive interval.
+To replace a disk:
+
+1. In **File Manager**, select the drive and use the empty-slot/unload entry
+   to eject its disk.
+2. Return to BCOS and let it run for **two seconds with the drive empty**.
+3. Open **File Manager** again and load the replacement in the same drive.
+4. Return to BCOS and wait **three seconds** before answering its prompt.
+
+Waiting in a paused menu does not count as the empty-drive interval.
 
 ### Keys to use in BCOS
 
@@ -141,7 +141,8 @@ mame.exe m40 -window -ramsize 2048K -flop1 "work\bcos\CONFIG.imd" -flop2 "work\b
 ```
 
 1. Acknowledge any MAME startup warning.
-2. Set **FLOPPY** boot as described above. Disable MAME controls.
+2. Check the status bar. If it shows **HD**, click it to select **FLOPPY**
+   and restart as described in the controls reference.
 3. Wait for **DATE YYMMDD**. Startup can take about 90 seconds.
 4. Type **860909** on the numeric keypad and press **keypad Enter**.
 5. At **SYS**, type **sys** and press **keypad Enter**.
@@ -151,7 +152,7 @@ mame.exe m40 -window -ramsize 2048K -flop1 "work\bcos\CONFIG.imd" -flop2 "work\b
 
 1. At **SYSTEM ENVIRONMENT CHOICE**, set **COMPLETE SYSTEM = Y**. If
    **RUN-TIME ONLY WITH DEBUGGER** remains editable, set it to **N**.
-2. Set the password to **SPAM**, using Shift for the uppercase letters.
+2. Choose a password and write it down. Use **Shift** for uppercase letters.
 3. Submit fields with **keypad Enter** and select **C** to continue.
 4. If asked for the system/storage type, select **M40, floppy-only / mono FDU**.
 5. Include **BASIC** and its editor/program-preparation support. Keep the
@@ -175,7 +176,7 @@ Keep **CONFIG in FD1** throughout generation.
    **work\bcos\RUN.imd** in FD2, using the same disk-change procedure.
 5. Enter **DRIVE NAME: FD2**, **VOLUME CODE: RUN** and **OWNER: TP**.
 6. Wait for generation to finish, then use the displayed Exit option.
-7. Enable MAME controls and exit MAME.
+7. Close the MAME window after disk writing has finished.
 
 You now have two different disks. **Generate both—do not make RUN by copying
 the completed LOAD disk.** The names LOAD and RUN entered in BCOS are the
@@ -187,26 +188,25 @@ volume labels; renaming an image file in Windows does not change its label.
 mame.exe m40 -window -ramsize 2048K -flop1 "work\bcos\LOAD.imd"
 ```
 
-1. Check that the status bar shows **FLOPPY**. Disable MAME controls.
+1. Check that the status bar shows **FLOPPY**. If it shows **HD**, change it
+   and restart as described in the controls reference.
 2. Wait for **DISMOUNT LOAD-TIME DISK / MOUNT RUN-TIME DISK**.
 3. Eject **LOAD from FD1**, run with the drive empty for at least two seconds,
    then mount **work\bcos\RUN.imd in FD1**. Wait about three seconds.
 4. At **AFTER ANY KEY : GO**, press **main Enter**.
-5. Enter **SPAM** in uppercase and press **keypad Enter**.
+5. Enter the password you chose during configuration and press **keypad Enter**.
 6. Enter **860909** using keypad digits and press **keypad Enter**.
 7. Wait for **/SYS**. Leave RUN mounted in FD1.
 
 ## 6. Open BASIC
 
-1. At **/SYS**, make sure MAME controls are disabled.
-2. Hold **left Ctrl**, tap **F12**, then release Ctrl.
-3. Check that **L2 lights**. If it is already lit, do not repeat the chord.
-4. Type **basic** and press **keypad Enter**.
-5. The screen should show **EDIT**.
+1. At **/SYS**, check **L2**. If it is off, hold **left Ctrl**, tap **F12**,
+   then release Ctrl. L2 should light. Leave it alone if it is already lit.
+2. Type **basic** and press **keypad Enter**.
+3. The screen should show **EDIT**.
 
-**This is the currently tested endpoint.** Entering and running a BASIC
-program still needs a verified procedure; instructions for that step will be
-added when it works. The Windows version of this walkthrough also awaits testing.
+**Verified so far: BASIC opens at EDIT.** Program entry and execution remain
+unverified. These steps were tested on macOS; Windows testing is pending.
 
 ## Boot the supplied system
 

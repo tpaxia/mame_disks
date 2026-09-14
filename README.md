@@ -53,7 +53,6 @@ mame m40 -flop1 /path/to/mame_disks/m40_diagnostics/A.IMD
 
 ## Olivetti M40 — BCOS
 
-BCOS disk images and Windows instructions for configuring an M40 system,
-booting LOAD/RUN and opening BASIC, with keyboard and floppy-change instructions.
+Configure BCOS, boot the M40 and open BASIC on Windows.
 
 [Read the BCOS Windows guide](BCOS/BCOS_WINDOWS_BASIC.md).
