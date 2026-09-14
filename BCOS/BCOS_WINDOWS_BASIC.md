@@ -36,20 +36,21 @@ while they are disabled. See [MAME's keyboard controls](https://docs.mamedev.org
 
 ## Set floppy boot and read the status bar
 
-1. Open the MAME menu and select **Machine Configuration**.
-2. Set **Console IPL Switch** to **ISL2 - Floppy Disk**.
-3. Leave **Key switch 1, 2 and 3** at **Normal**.
-4. Close the menu. With MAME controls still enabled, press **Shift+F3** to
-   restart the machine. Do not reset while it is writing a disk.
-5. Disable MAME controls with **Scroll Lock**.
+1. Click **HD/FLOPPY** in the status bar until it shows **FLOPPY**.
+2. Leave **K1, K2 and K3** at **NORMAL**. Click a switch's label to cycle
+   its position if needed.
+3. If you changed the boot selector, enable MAME controls with **Scroll Lock**
+   and press **Shift+F3** to restart. Do not reset while a disk is being written.
+4. Disable MAME controls with **Scroll Lock** before typing into BCOS.
 
 The bar below the screen should show **FLOPPY** and **K1/K2/K3: NORMAL**.
-To select hard-disk boot, use **ISL1 - Hard Disk** in the same menu; the bar
-then shows **HD**. Use FLOPPY for this guide.
+Click **FLOPPY** to select **HD**, or **HD** to select **FLOPPY**.
+Use FLOPPY for this guide. You do not need to open Machine Configuration
+to change these switches.
 
 The four lamps are **READY, L1, L2 and SHIFT**. BCOS controls them; READY
-does not have to stay lit. **L2 lights when TEST mode is enabled.** Change
-switches through the menu, not by clicking the status bar.
+does not have to stay lit. **L2 lights when TEST mode is enabled.**
+The lamps are indicators, not clickable switches.
 
 ## Load or change a floppy
 
