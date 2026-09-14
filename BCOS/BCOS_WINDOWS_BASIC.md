@@ -157,13 +157,14 @@ mame.exe m40 -window -ramsize 2048K -flop1 "work\bcos\CONFIG.imd" -flop2 "work\b
 4. If asked for the system/storage type, select **M40, floppy-only / mono FDU**.
 5. On the software options screens, select **all available options** for the
    complete system, not just BASIC. This matches the supplied LOAD/RUN system.
-6. At the national keyboard list, select **13 — USA-ASCII** using keypad digits.
-7. Confirm your choices. When asked for the drive containing the keyboard files,
+6. Confirm your choices. When asked for the drive containing the keyboard files,
    enter **FD2** and press **keypad Enter**. The launch command already mounted
    the keyboard floppy in FD2; there is no disk to insert or change here.
    Use Shift for F and D, then release Shift for keypad2.
    If the cursor starts one space into the field, press **Left once first**.
-8. Confirm the displayed volume when requested. Wait for **Firmware file copied**.
+7. Confirm the displayed volume when requested.
+8. At the national keyboard list, select **13 — USA-ASCII** using keypad digits
+   and press **keypad Enter**. Wait for **Firmware file copied**.
 9. At **Press S bar**, press **main Enter**, not Space.
 
 ## 4. Create LOAD and RUN
