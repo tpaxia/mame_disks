@@ -4,21 +4,23 @@ This guide takes you through creating a BCOS system, booting it and opening
 BASIC. To use the supplied system without creating a new one, go to
 [Boot the supplied system](#boot-the-supplied-system).
 
-## Before you start
+## Prerequisites
 
-Prepare the emulator, ROM and disks separately:
+Check that you have the following. **If everything is already in place, skip
+to the instructions below.** Download or copy only what is missing.
 
-1. Install a Windows build of the
-   [MAME `olivetti_m40` branch](https://github.com/tpaxia/mame/tree/olivetti_m40)
-   from commit `0cf819193f1` or later. This provides the emulator, not the
-   M40 ROM or BCOS disks.
-2. Supply the M40 ROM separately. Put **m40rom-6.0.bin** in **roms\m40**
-   inside the MAME folder. Alternatively, put an M40 ROM set containing that
-   file in **roms\m40.zip**. The ROM is not included in this disk repository.
-3. Create a **flop** folder inside the MAME folder. Copy the following images
-   from [this repository's BCOS folder](./) into it. The first two are needed
-   to configure a new system; the last two are needed only to boot the supplied
-   preconfigured system.
+- **MAME for Windows with M40 support:** a build of the
+  [MAME `olivetti_m40` branch](https://github.com/tpaxia/mame/tree/olivetti_m40)
+  from commit `0cf819193f1` or later. If missing, obtain a compatible build
+  or compile that branch.
+- **M40 ROM:** `m40rom-6.0.bin` in `roms\m40`, or inside `roms\m40.zip`,
+  under your MAME folder. If missing, obtain the M40 ROM separately; neither
+  the emulator source nor this disk repository supplies it.
+- **BCOS disks:** the images listed below in your MAME folder's `flop`
+  directory. Download any missing images from [this repository's BCOS folder](./)
+  and copy them there. Create `flop` if necessary. The first two are for
+  configuring a new system; the last two are for booting the supplied system.
+- **A PC keyboard with a numeric keypad.**
 
 | File | Use |
 |---|---|
@@ -27,11 +29,8 @@ Prepare the emulator, ROM and disks separately:
 | `BCOS_LOAD.imd` | Boots the supplied system |
 | `BCOS_RUN.imd` | Runs the supplied system and BASIC |
 
-If a private package already contains these files in the indicated folders,
-skip copying them. Otherwise, copy them yourself before continuing.
-
-Use a PC keyboard with a numeric keypad. Open **Command Prompt** in the
-folder containing `mame.exe`. If your executable is named `m40.exe`, use
+Open **Command Prompt** in the folder containing `mame.exe`.
+If your executable is named `m40.exe`, use
 that name instead of `mame.exe` in the commands below.
 
 ## Quick introduction to MAME's M40 controls
