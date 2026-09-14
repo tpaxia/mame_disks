@@ -221,7 +221,7 @@ mame.exe m40 -window -ramsize 2048K -flop1 "work\ready\LOAD.imd"
 ```
 
 Follow **5. Boot the new system**, using `work\ready\RUN.imd` for the swap.
-The supplied password is **SPAM**. Then follow **6. Open BASIC**.
+Use the password configured for the supplied system. Then follow **6. Open BASIC**.
 
 ## If something goes wrong
 
