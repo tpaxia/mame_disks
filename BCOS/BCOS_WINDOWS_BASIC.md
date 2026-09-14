@@ -6,10 +6,19 @@ BASIC. To use the supplied system without creating a new one, go to
 
 ## Before you start
 
-Use a Windows build of the
-[MAME `olivetti_m40` branch](https://github.com/tpaxia/mame/tree/olivetti_m40)
-from commit `0cf819193f1` or later. The distribution should have the ROMs in
-`roms` and these disks in `flop`:
+Prepare the emulator, ROM and disks separately:
+
+1. Install a Windows build of the
+   [MAME `olivetti_m40` branch](https://github.com/tpaxia/mame/tree/olivetti_m40)
+   from commit `0cf819193f1` or later. This provides the emulator, not the
+   M40 ROM or BCOS disks.
+2. Supply the M40 ROM separately. Put **m40rom-6.0.bin** in **roms\m40**
+   inside the MAME folder. Alternatively, put an M40 ROM set containing that
+   file in **roms\m40.zip**. The ROM is not included in this disk repository.
+3. Create a **flop** folder inside the MAME folder. Copy the following images
+   from [this repository's BCOS folder](./) into it. The first two are needed
+   to configure a new system; the last two are needed only to boot the supplied
+   preconfigured system.
 
 | File | Use |
 |---|---|
@@ -17,6 +26,9 @@ from commit `0cf819193f1` or later. The distribution should have the ROMs in
 | `K02741_BCOS_II_3.3_JJKEYB.imd` | Supplies the keyboard files |
 | `BCOS_LOAD.imd` | Boots the supplied system |
 | `BCOS_RUN.imd` | Runs the supplied system and BASIC |
+
+If a private package already contains these files in the indicated folders,
+skip copying them. Otherwise, copy them yourself before continuing.
 
 Use a PC keyboard with a numeric keypad. Open **Command Prompt** in the
 folder containing `mame.exe`. If your executable is named `m40.exe`, use
