@@ -56,3 +56,5 @@ mame m40 -flop1 /path/to/mame_disks/m40_diagnostics/A.IMD
 Configure BCOS, boot the M40 and open BASIC on Windows.
 
 [Read the BCOS Windows guide](BCOS/BCOS_WINDOWS_BASIC.md).
+
+[PC keyboard map and keyboard diagnostic tests](BCOS/M40_KEYBOARD.md).

@@ -11,8 +11,8 @@ to the instructions below.** Download or copy only what is missing.
 
 - **MAME for Windows with M40 support:** a build of the
   [MAME `olivetti_m40` branch](https://github.com/tpaxia/mame/tree/olivetti_m40)
-  from commit `0cf819193f1` or later. If missing, obtain a compatible build
-  or compile that branch.
+  including the new **US/ANSI Alt-layer keyboard mapping** described below.
+  Use commit `a421751bf44` or later; older builds use different bindings.
 - **M40 ROM:** `m40rom-6.0.bin` in `roms\m40`, or inside `roms\m40.zip`,
   under your MAME folder. If missing, obtain the M40 ROM separately; neither
   the emulator source nor this disk repository supplies it.
@@ -21,6 +21,9 @@ to the instructions below.** Download or copy only what is missing.
   and copy them there. Create `flop` if necessary. The first two are for
   configuring a new system; the last two are for booting the supplied system.
 - **A PC keyboard with a numeric keypad.**
+- **M40 UI profile:** copy [m40-ui.cfg](m40-ui.cfg) into your MAME folder's
+  `ctrlr` directory. Create that directory if needed. This reserves F12 for
+  UI control and disables the conflicting F12 screenshot shortcut.
 
 | File | Use |
 |---|---|
@@ -43,17 +46,20 @@ A short reference for the controls used below. The setup procedure starts at
 MAME normally starts ready for BCOS typing. Use the following sequence when
 you need its menus:
 
-1. Press **Scroll Lock**. The message should say **UI controls enabled**.
+1. Press **F12**. The message should say **UI controls enabled**.
 2. Press **Tab** to open the menu. Use the arrow keys and **main Enter**.
 3. When finished, close the menu with **Tab**.
-4. Press **Scroll Lock** again. Check that **UI controls disabled** appears
+4. Press **F12** again. Check that **UI controls disabled** appears
    before typing into BCOS.
 
 Only toggle back if you enabled the controls. Clicking the status-bar switches
-does not require Scroll Lock. If controls are already enabled, start at step 2.
+does not require F12. If controls are already enabled, start at step 2.
 
-On Windows, **Scroll Lock** toggles the menus' keyboard controls. **F12** is
-BCOS RUN during normal typing, or screenshot capture with MAME controls enabled.
+**F12** toggles MAME controls on both Windows and macOS with the supplied
+`m40-ui` profile. Neither F12 nor Scroll Lock sends an M40 key. If saved custom
+bindings override the profile, set **Toggle UI Controls** to F12 and clear
+**Save Snapshot** under **Input Settings → Input Assignments (general) →
+User Interface**. Press F12 alone, without Shift, Ctrl or Alt.
 
 ### Set floppy boot and read the status bar
 
@@ -61,7 +67,7 @@ Click **HD/FLOPPY** to change the boot device. Use **FLOPPY** for this guide.
 Leave **K1, K2 and K3** at **NORMAL**; click a label to change its position.
 
 If you change the boot device after startup, restart the machine: press
-**Scroll Lock**, **Shift+F3**, then **Scroll Lock** again. This assumes you
+**F12**, **Shift+F3**, then **F12** again. This assumes you
 were in normal BCOS typing mode. Do not restart during a disk write.
 
 The four lamps are **READY, L1, L2 and SHIFT**. BCOS controls them; READY
@@ -97,21 +103,25 @@ Enter are different keys.**
 | **Keypad Enter** | Submit fields and commands |
 | **Main Enter** | Acknowledge `AFTER ANY KEY : GO` and `Press S bar` |
 | **Shift + letter** | Uppercase answers and password |
-| **Keypad `*`** | Clear the keyboard error marked E or KE |
-| **F12** | RUN/retry; acknowledge the generator's `ERROR` message |
-| **Left Ctrl + F12** | Toggle TEST at `/SYS`; check L2 |
+| **Alt+C** | Clear the keyboard error marked E or KE |
+| **F8** | RUN/retry; acknowledge the generator's `ERROR` message |
+| **Ctrl+F8** | Toggle TEST at `/SYS`; check L2 |
 | **Left / Right arrows** | Move within an input field |
 
-Do not use Caps Lock for uppercase, right Ctrl for CONTROL, or keypad `+`
-as an arithmetic plus. These keys have other functions on the emulated
-keyboard. Do not assume Backspace edits numeric fields like a Windows text box.
+Both PC Ctrl keys send M40 CONTROL; both Shift keys send M40 SHIFT.
+Caps Lock sends the M40 LOCK key, not a Windows uppercase conversion.
+Use Shift for uppercase answers. Do not assume Backspace edits numeric
+fields like a Windows text box.
 
 The original keyboards have different labels. In the ANK1402 photograph,
-the red **CLEAR** key corresponds to PC **keypad `*`**. In the ANK1426
+the red **CLEAR** key corresponds to PC **Alt+C**. In the ANK1426
 photograph, that position is labelled `*`. The ANK1426 key labelled **RES**
-is PC right Ctrl; it is not the error-clear key used here. The original
-**F8/F16** key is mapped to PC **F12**. The separate ANK1426 **RUN** key is
-not the RUN function used by BCOS in this guide.
+is PC **End**; it is not the error-clear key used here. The original
+**F8/F16** key is mapped to PC **F8**. The separate ANK1426 **RUN** key is
+**Alt+R**, not the RUN function used by BCOS in this guide.
+
+See the [complete PC keyboard map and diagnostic key sequences](M40_KEYBOARD.md)
+for function keys, navigation keys, punctuation and the Alt layer.
 
 <details>
 <summary>Original keyboard photographs</summary>
@@ -148,7 +158,7 @@ replace their contents. Keep the originals in `flop` unchanged.
 Enter this command on one line:
 
 ```bat
-mame.exe m40 -window -ramsize 2048K -flop1 "work\bcos\CONFIG.imd" -flop2 "work\bcos\KEYBOARD.imd"
+mame.exe m40 -window -ramsize 2048K -uimodekey F12 -ctrlr m40-ui -flop1 "work\bcos\CONFIG.imd" -flop2 "work\bcos\KEYBOARD.imd"
 ```
 
 1. Acknowledge any MAME startup warning.
@@ -199,7 +209,7 @@ volume labels; renaming an image file in Windows does not change its label.
 ## 5. Boot the new system
 
 ```bat
-mame.exe m40 -window -ramsize 2048K -flop1 "work\bcos\LOAD.imd"
+mame.exe m40 -window -ramsize 2048K -uimodekey F12 -ctrlr m40-ui -flop1 "work\bcos\LOAD.imd"
 ```
 
 1. Check that the status bar shows **FLOPPY**. If it shows **HD**, change it
@@ -214,7 +224,7 @@ mame.exe m40 -window -ramsize 2048K -flop1 "work\bcos\LOAD.imd"
 
 ## 6. Open BASIC
 
-1. At **/SYS**, check **L2**. If it is off, hold **left Ctrl**, tap **F12**,
+1. At **/SYS**, check **L2**. If it is off, hold **Ctrl**, tap **F8**,
    then release Ctrl. L2 should light. Leave it alone if it is already lit.
 2. Type **basic** and press **keypad Enter**.
 3. The screen should show **EDIT**.
@@ -231,7 +241,7 @@ mkdir work\ready
 copy "flop\BCOS_LOAD.imd" "work\ready\LOAD.imd"
 copy "flop\BCOS_RUN.imd" "work\ready\RUN.imd"
 attrib -R "work\ready\*.imd"
-mame.exe m40 -window -ramsize 2048K -flop1 "work\ready\LOAD.imd"
+mame.exe m40 -window -ramsize 2048K -uimodekey F12 -ctrlr m40-ui -flop1 "work\ready\LOAD.imd"
 ```
 
 Follow **5. Boot the new system**, using `work\ready\RUN.imd` for the swap.
@@ -241,8 +251,8 @@ Use the password configured for the supplied system. Then follow **6. Open BASIC
 
 | Problem | What to do |
 |---|---|
-| Tab does not open the menu | Press Scroll Lock to enable MAME controls, then Tab |
-| E or KE appears at the bottom left | Press keypad `*` once |
-| The generator shows ERROR after lowercase c | Clear KE if present, press F12, then enter uppercase C and keypad Enter |
-| BASIC reports SYS ERR.163 | Clear the error with keypad `*`; enable TEST with left Ctrl+F12 and check L2 |
+| Tab does not open the menu | Press F12 to enable MAME controls, then Tab |
+| E or KE appears at the bottom left | Press Alt+C once |
+| The generator shows ERROR after lowercase c | Clear KE if present, press F8, then enter uppercase C and keypad Enter |
+| BASIC reports SYS ERR.163 | Clear the error with Alt+C; enable TEST with Ctrl+F8 and check L2 |
 | SYS ERR.006 appears after swapping LOAD for RUN | Restart the boot and use the eject/wait/load procedure |
