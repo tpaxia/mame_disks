@@ -1,7 +1,8 @@
 # Olivetti P6066 media
 
 This directory contains 51 IMD floppy images, including a generated HDU
-bootstrap, plus an installed 10 MB HDU image. `SHA256SUMS` records every image.
+bootstrap, plus an installed 10 MB HDU image. `SHA256SUMS` records every disk
+image.
 Use working copies: ESE writes to mounted system and bootstrap media during
 ordinary startup and operation.
 
@@ -76,3 +77,9 @@ image outside the normal system/application geometry and is also excluded.
 
 The analysis, provenance, filesystem checks and generation logs are maintained
 in [tpaxia/P6066](https://github.com/tpaxia/P6066).
+
+## Keyboard mapping
+
+The [P6066 keyboard directory](keyboard/README.md) contains the complete MAME
+host-key mapping, the original keyboard reference, and the final composite PNG
+showing the primary, Shift, Alt-prefix, and F9 KB MODE layers.
