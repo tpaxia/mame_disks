@@ -58,7 +58,7 @@ Configure BCOS, boot the M40 and open BASIC on Windows.
 
 [Read the BCOS Windows guide](BCOS/BCOS_WINDOWS_BASIC.md).
 
-[PC keyboard map and keyboard diagnostic tests](BCOS/M40_KEYBOARD.md).
+[M40 ANK keyboard map](BCOS/M40_KEYBOARD.md), [ESE keyboard overlay](BCOS/M40_ESE_KEYBOARD.md).
 
 ## Olivetti P6066 — ESE
 
