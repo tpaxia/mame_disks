@@ -3,20 +3,18 @@
 ## Floppy boot
 
 ```sh
-mame p6066 -flop1 system/067.IMD
+mame p6066 -flop1 067.IMD
 ```
 
-Replace `067.IMD` with any system floppy in the `system/` directory.
+Replace `067.IMD` with any system floppy.
 
 ## HDU boot
-
-Boot from the installed 10 MB hard disk:
 
 ```sh
 mame p6066 \
   -bus:dma rodma -bus:hdu difo -bus:video go011 \
-  -hard1 P6066/hdu/P6066_HDU_10MB_INSTALLED.chd \
-  -flop2 P6066/hdu/P6066_HDU_BOOTSTRAP.IMD
+  -hard1 P6066_HDU_10MB_INSTALLED.chd \
+  -flop2 P6066_HDU_BOOTSTRAP.IMD
 ```
 
 ## Keyboard
