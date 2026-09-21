@@ -63,7 +63,6 @@ Boot the M40, open BASIC, or generate a new BCOS system from scratch.
 
 ## Olivetti P6066 — ESE
 
-The `P6066` folder contains verified system/application IMDs and a boot-tested,
-installed 10 MB HDU system with its generated bootstrap floppy.
+Floppy or HDU boot, plus keyboard mapping.
 
-[P6066 media, validation notes and launch command](P6066/README.md).
+[P6066 howto](P6066/README.md).
