@@ -58,3 +58,10 @@ Configure BCOS, boot the M40 and open BASIC on Windows.
 [Read the BCOS Windows guide](BCOS/BCOS_WINDOWS_BASIC.md).
 
 [PC keyboard map and keyboard diagnostic tests](BCOS/M40_KEYBOARD.md).
+
+## Olivetti P6066 — ESE
+
+The `P6066` folder contains verified system/application IMDs and a boot-tested,
+installed 10 MB HDU system with its generated bootstrap floppy.
+
+[P6066 media, validation notes and launch command](P6066/README.md).
