@@ -23,14 +23,8 @@ See the [M40 ANK keyboard map](M40_KEYBOARD.md) and
 
 ## Boot the system
 
-Copy the supplied LOAD/RUN pair and start the M40:
-
 ```bat
-mkdir work\ready
-copy flop\BCOS_LOAD.imd work\ready\LOAD.imd
-copy flop\BCOS_RUN.imd work\ready\RUN.imd
-attrib -R work\ready\*.imd
-mame.exe m40 -window -ramsize 2048K -uimodekey F12 -ctrlr m40-ui -flop1 work\ready\LOAD.imd
+mame.exe m40 -window -ramsize 2048K -uimodekey F12 -ctrlr m40-ui -flop1 flop\BCOS_LOAD.imd
 ```
 
 Copy [m40-ui.cfg](m40-ui.cfg) to MAME's `ctrlr` directory first if you
@@ -42,7 +36,7 @@ haven't already. It reserves F12 for UI control.
 3. Wait for **DISMOUNT LOAD-TIME DISK / MOUNT RUN-TIME DISK**.
 4. Open the MAME menu (F12, Tab), eject LOAD from FD1, close the menu and
    let the emulator run with the drive empty for at least two seconds.
-5. Open the menu again, mount `work\ready\RUN.imd` in FD1, close the menu
+5. Open the menu again, mount `flop\BCOS_RUN.imd` in FD1, close the menu
    and wait about three seconds.
 6. At **AFTER ANY KEY : GO**, press **main Enter**.
 7. Enter the system password with **keypad Enter**.
