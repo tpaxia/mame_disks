@@ -27,9 +27,6 @@ See the [M40 ANK keyboard map](M40_KEYBOARD.md) and
 mame.exe m40 -window -ramsize 2048K -uimodekey F12 -ctrlr m40-ui -flop1 flop\BCOS_LOAD.imd
 ```
 
-Copy [m40-ui.cfg](m40-ui.cfg) to MAME's `ctrlr` directory first if you
-haven't already. It reserves F12 for UI control.
-
 1. Dismiss any MAME startup warning.
 2. Check the status bar: if it shows **HD**, click it to select **FLOPPY**,
    then press F12, Shift+F3, F12 to restart.
