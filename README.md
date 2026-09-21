@@ -39,16 +39,16 @@ mame m20 \
 
 Use working copies of the images if you want to keep these originals pristine.
 
-## Olivetti M40 — DCOS 8.4 diagnostics
+## Olivetti M40 — bootable floppy media
 
-The `m40_diagnostics` folder contains the nine bootable field-diagnostic disks:
-`A.IMD` through `H.IMD`, plus the reduced `R.IMD` set. Background and operating
-details are in [tpaxia/l1_m40](https://github.com/tpaxia/l1_m40).
+The [`m40`](m40/README.md) folder collects the IMD images verified to boot to a
+usable screen or prompt: ESE, MDOS, BCOS II 3.3, the generated BCOS LOAD/RUN
+pair, Gardini utilities, and the DCOS 8.4 diagnostic set.
 
-For example, boot disk A with:
+For example, boot ESE with:
 
 ```sh
-mame m40 -flop1 /path/to/mame_disks/m40_diagnostics/A.IMD
+mame m40 -ram 2m -flop1 /path/to/mame_disks/m40/ESE.IMD
 ```
 
 ## Olivetti M40 — BCOS
