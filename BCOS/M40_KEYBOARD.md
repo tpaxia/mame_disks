@@ -8,15 +8,6 @@ MAME. ESE meanings are documented in the
 
 ![Cumulative M40 ANK mapping](BCOS_GUIDE_IMAGES/m40-ank-keyboard-mapping-combo.png)
 
-Individual vector maps are available in
-[tpaxia/L1_M30_M40](https://github.com/tpaxia/L1_M30_M40/tree/main/docs/keyboard):
-
-- Direct ANK mapping
-- Shift layer
-- Host Alt layer
-- ESE command overlay
-- ESE KB MODE keyword layer
-
 ## How to read the maps
 
 - A label on a PC key shows the corresponding M40 ANK key.
@@ -74,13 +65,3 @@ Hold Alt while pressing the second key.
 | Alt+keypad decimal | Keypad 000 |
 
 Unassigned Alt combinations do nothing.
-
-## Reproduction
-
-From the [L1_M30_M40 keyboard directory](https://github.com/tpaxia/L1_M30_M40/tree/main/docs/keyboard):
-
-```sh
-python3 generate-m40-ank-maps.py
-```
-
-Open `m40-ank-keyboard-mapping-combo.svg` in a browser to export a PNG.

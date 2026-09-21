@@ -5,9 +5,6 @@
 ESE meanings layered over the
 [US keyboard to M40 ANK mapping](M40_KEYBOARD.md).
 
-ESE overlay SVGs are available in
-[tpaxia/L1_M30_M40](https://github.com/tpaxia/L1_M30_M40/tree/main/docs/keyboard).
-
 ## Command keys
 
 **HOLD ALT** is an instruction for the PC keyboard. Alt itself is not an M40
