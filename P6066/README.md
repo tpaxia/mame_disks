@@ -2,12 +2,8 @@
 
 ## Floppy boot
 
-Boot from a system floppy in FD1:
-
 ```sh
-mame p6066 \
-  -bus:dma rodma -bus:hdu difo -bus:video go011 \
-  -flop1 P6066/system/067.IMD
+mame p6066 -flop1 system/067.IMD
 ```
 
 Replace `067.IMD` with any system floppy in the `system/` directory.
