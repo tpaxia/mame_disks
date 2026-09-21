@@ -54,11 +54,12 @@ mame m40 -ram 2m -flop1 /path/to/mame_disks/m40/ESE.IMD
 
 ## Olivetti M40 — BCOS
 
-Configure BCOS, boot the M40 and open BASIC on Windows.
+Boot the M40, open BASIC, or generate a new BCOS system from scratch.
 
-[Read the BCOS Windows guide](BCOS/BCOS_WINDOWS_BASIC.md).
-
-[M40 ANK keyboard map](BCOS/M40_KEYBOARD.md), [ESE keyboard overlay](BCOS/M40_ESE_KEYBOARD.md).
+[Windows quick start](BCOS/BCOS_WINDOWS_BASIC.md) ·
+[BCOS generation](BCOS/BCOS_GENERATION.md) ·
+[M40 ANK keyboard map](BCOS/M40_KEYBOARD.md) ·
+[ESE keyboard overlay](BCOS/M40_ESE_KEYBOARD.md)
 
 ## Olivetti P6066 — ESE
 
