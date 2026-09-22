@@ -5,11 +5,12 @@
 ```sh
 mame p6066 -flop1 flop\p6066\067.IMD -uimodekey F12 -window
 ```
-With the GO011 video card:
-
+With the GO011 video card, use the verified EXD-configured compilation system:
 
 ```sh
-mame p6066  -bus:dma rodma  -bus:video go011 -flop1 flop\p6066\067.IMD -uimodekey F12 -window
+mame p6066 -bus:video go011 \
+  -flop1 flop\p6066\MASTER_SYSTEM_FOR_COMPILATION_R1_0_GO011.IMD \
+  -uimodekey F12 -window
 ```
 
 Replace `067.IMD` with any system floppy.
