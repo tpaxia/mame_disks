@@ -30,7 +30,7 @@ their contents. Keep the originals in `flop` unchanged.
 ## 2. Start the configurator
 
 ```bat
-mame.exe m40 -window -ramsize 2048K -uimodekey F12 -ctrlr m40-ui -flop1 work\bcos\CONFIG.imd -flop2 work\bcos\KEYBOARD.imd
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 work\bcos\CONFIG.imd -flop2 work\bcos\KEYBOARD.imd
 ```
 
 1. Dismiss any MAME startup warning.

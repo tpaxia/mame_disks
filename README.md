@@ -10,7 +10,7 @@ Background and build details are in
 [tpaxia/Zilog_S8000](https://github.com/tpaxia/Zilog_S8000).
 
 ```sh
-mame s8000 -hard1 s8000/s8000_smd.chd
+mame s8000 -hard1 hard\s8000\s8000_smd.chd
 ```
 
 For `s8000`, enable **Support Segmented OS** in Machine Configuration and
@@ -18,7 +18,7 @@ restart the machine. Press numeric-keypad `+` for the front-panel **START**
 button. The same image can also be run on the Series Two CPU:
 
 ```sh
-mame s8000s2 -hard1 s8000/s8000_smd.chd
+mame s8000s2 -hard1 hard\s8000\s8000_smd.chd
 ```
 
 Do not open the image in both machines at the same time.
@@ -33,9 +33,9 @@ Boot CP/M-8000:
 
 ```sh
 mame m20 \
-  -hard1 m20/m20-cpm8000.chd \
+  -hard1 hard\m20\m20-cpm8000.chd \
   -bios 2 -ramsize 512k \
-  -flop1 m20/REL11A.IMG
+  -flop1 flop\m20\REL11A.IMG
 ```
 
 Use working copies of the images if you want to keep these originals pristine.
@@ -49,7 +49,7 @@ pair, Gardini utilities, and the DCOS 8.4 diagnostic set.
 For example, boot ESE with:
 
 ```sh
-mame m40 -ram 2m -flop1 /path/to/mame_disks/m40/ESE.IMD
+mame m40 -ram 2m -flop1 flop\m40\ESE.IMD
 ```
 
 ## Olivetti M40 — BCOS

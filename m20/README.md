@@ -9,9 +9,9 @@ Boot with the CP/M-8000 `REL11A.IMG` floppy:
 
 ```sh
 mame m20 \
-  -hard1 m20/m20-cpm8000.chd \
+  -hard1 hard\m20\m20-cpm8000.chd \
   -bios 2 -ramsize 512k \
-  -flop1 m20/REL11A.IMG
+  -flop1 flop\m20\REL11A.IMG
 ```
 
 Use working copies of the images if you want to keep these originals pristine.

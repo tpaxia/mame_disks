@@ -24,17 +24,21 @@ See the [M40 ANK keyboard map](M40_KEYBOARD.md) and
 ## Boot the system
 
 ```bat
-mame.exe m40 -window -ramsize 2048K -uimodekey F12 -ctrlr m40-ui -flop1 flop\BCOS_LOAD.imd
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 flop\m40\BCOS_LOAD.imd
 ```
 
 1. Dismiss any MAME startup warning.
 2. Check the status bar: if it shows **HD**, click it to select **FLOPPY**,
    then press F12, Shift+F3, F12 to restart.
 3. Wait for **DISMOUNT LOAD-TIME DISK / MOUNT RUN-TIME DISK**.
-4. Open the MAME menu (F12, Tab), eject LOAD from FD1, close the menu and
-   let the emulator run with the drive empty for at least two seconds.
-5. Open the menu again, mount `flop\BCOS_RUN.imd` in FD1, close the menu
-   and wait about three seconds.
+4. Press **F12** once to enable the MAME UI controls, then **Tab** to open
+   the MAME menu. Eject LOAD from FD1 and press **Tab** to close the menu.
+   The emulator now runs with the drive empty; leave it for at least two
+   seconds. Time spent inside the paused menu does not count.
+5. The UI controls are still enabled, so press only **Tab** to re-open the
+   menu, mount `flop\BCOS_RUN.imd` in FD1 and press **Tab** to close it.
+   Wait about three seconds, then press **F12** to disable the UI controls
+   before answering BCOS.
 6. At **AFTER ANY KEY : GO**, press **main Enter**.
 7. Enter the system password with **keypad Enter**.
 8. Enter the date (e.g. **860909**) with keypad digits and **keypad Enter**.

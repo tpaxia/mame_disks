@@ -24,7 +24,7 @@ The `diagnostics` directory contains the boot-tested DCOS 8.4 diagnostic set:
 Use ROM 6.0, 2 MB RAM, and the floppy IPL setting:
 
 ```sh
-mame m40 -ram 2m -flop1 /path/to/image.imd
+mame m40 -ram 2m -flop1 flop\m40\ESE.IMD
 ```
 
 K02733 may require the BCOS FD1/controller-unit arrangement documented in the

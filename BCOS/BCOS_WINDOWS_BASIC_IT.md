@@ -171,7 +171,7 @@ ne sostituirà il contenuto. Lasciare inalterati gli originali in `flop`.
 Inserire questo comando su una sola riga:
 
 ```bat
-mame.exe m40 -window -ramsize 2048K -uimodekey F12 -ctrlr m40-ui -flop1 "work\bcos\CONFIG.imd" -flop2 "work\bcos\KEYBOARD.imd"
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 "work\bcos\CONFIG.imd" -flop2 "work\bcos\KEYBOARD.imd"
 ```
 
 1. Confermare gli eventuali avvisi iniziali di MAME.
@@ -232,7 +232,7 @@ l'etichetta del volume.
 ## 5. Avviare il nuovo sistema
 
 ```bat
-mame.exe m40 -window -ramsize 2048K -uimodekey F12 -ctrlr m40-ui -flop1 "work\bcos\LOAD.imd"
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 "work\bcos\LOAD.imd"
 ```
 
 1. Verificare che la barra di stato indichi **FLOPPY**. Se indica **HD**,
@@ -268,7 +268,7 @@ mkdir work\ready
 copy "flop\BCOS_LOAD.imd" "work\ready\LOAD.imd"
 copy "flop\BCOS_RUN.imd" "work\ready\RUN.imd"
 attrib -R "work\ready\*.imd"
-mame.exe m40 -window -ramsize 2048K -uimodekey F12 -ctrlr m40-ui -flop1 "work\ready\LOAD.imd"
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 "work\ready\LOAD.imd"
 ```
 
 Seguire **5. Avviare il nuovo sistema**, usando `work\ready\RUN.imd` per
