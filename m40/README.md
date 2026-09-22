@@ -36,7 +36,7 @@ L1 M40 project. The project launch scripts should be preferred for BCOS work.
 2. At `DISMOUNT LOAD-TIME DISK / MOUNT RUN-TIME DISK`, eject LOAD.
 3. Let emulation run with the drive empty for at least two emulated seconds.
 4. Insert `BCOS_RUN.imd` in the same drive.
-5. Continue at `AFTER ANY KEY : GO`.
+5. Continue at `AFTER ANY KEY : GO`; the supplied system password is **SPAM** (uppercase), confirmed with keypad Enter.
 
 The empty interval is required so the emulated floppy controller observes the
 media change. Directly replacing LOAD with RUN can produce `SYS ERR.006`.

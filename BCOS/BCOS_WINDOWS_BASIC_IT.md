@@ -242,7 +242,7 @@ mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 "work\bcos\LOAD
    vuota per almeno due secondi, poi inserire **work\bcos\RUN.imd in FD1**.
    Attendere circa tre secondi.
 4. Alla richiesta **AFTER ANY KEY : GO**, premere **Invio principale**.
-5. Inserire la password scelta durante la configurazione e premere
+5. Inserire la password **SPAM**, usando **Shift** per le lettere maiuscole, e premere
    **Invio del tastierino**.
 6. Inserire **860909** con le cifre del tastierino e premere **Invio del tastierino**.
 7. Attendere **/SYS**. Lasciare RUN inserito in FD1.

@@ -40,7 +40,7 @@ mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 flop\m40\BCOS_L
    Wait about three seconds, then press **F12** to disable the UI controls
    before answering BCOS.
 6. At **AFTER ANY KEY : GO**, press **main Enter**.
-7. Enter the system password with **keypad Enter**.
+7. Enter the system password **SPAM** using **Shift** for the uppercase letters, then press **keypad Enter**.
 8. Enter the date (e.g. **860909**) with keypad digits and **keypad Enter**.
 9. Wait for **/SYS**.
 
