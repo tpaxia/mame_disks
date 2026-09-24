@@ -5,6 +5,23 @@
 ```sh
 mame p6066 -flop1 flop\p6066\067.IMD -uimodekey F12 -window
 ```
+
+The buzzer is silent by default. To explicitly disable all MAME audio, add
+`-sound none`; omit that flag to hear the emulated buzzer.
+
+The integrated printer is optional and is not connected by default. Attach the
+discard-output printer on the GOINO slot with
+`-bus:console:goino:options printer`. It completes printer requests without
+producing a print file or paper output. For example:
+
+```sh
+mame p6066 -bus:console:goino:options printer \
+  -flop1 flop\p6066\067.IMD -uimodekey F12 -window
+```
+
+To run with the printer absent, leave out the `-bus:console:goino:options`
+argument. The slot then reports no installed printer.
+
 With the GO011 video card, use the verified EXD-configured compilation system:
 
 ```sh
