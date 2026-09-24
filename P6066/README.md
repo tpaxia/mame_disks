@@ -6,8 +6,12 @@
 mame p6066 -flop1 flop\p6066\067.IMD -uimodekey F12 -window
 ```
 
-The buzzer is silent by default. To explicitly disable all MAME audio, add
-`-sound none`; omit that flag to hear the emulated buzzer.
+MAME audio is enabled by default (CoreAudio on macOS). Do not use `-sound
+none` if you want to hear audio; you can explicitly select CoreAudio with
+`-sound coreaudio`. The P6066 console buzzer itself is disabled by default:
+press Tab, open **Machine Configuration**, and set **Console buzzer** to
+**Enabled**. Audio output must also be enabled in MAME for the buzzer to be
+audible.
 
 The integrated printer is optional and is not connected by default. Attach the
 discard-output printer on the GOINO slot with
