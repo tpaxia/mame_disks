@@ -41,6 +41,35 @@ L1 M40 project. The project launch scripts should be preferred for BCOS work.
 The empty interval is required so the emulated floppy controller observes the
 media change. Directly replacing LOAD with RUN can produce `SYS ERR.006`.
 
+## BCOS II on the hard disk (WREN2, GO363)
+
+`m40-bcos-hd-kusa.chd` is a 65 MB WREN2 image (1024 cylinders, 9 heads, 32
+sectors of 256 bytes) holding the BCOS II multi-user system that the Olivetti
+restore procedure installs (JX24, MX24, TOC£, DKC£ of data sets FF and 80).
+The only change from that install is the keyboard map: the system was booted
+and its configuration changed from `KITA` to `KUSA` with the OSLEM `COS#`
+utility (`VARM KUSA` on the keyboard record), so a US keyboard types QWERTY.
+
+It boots to `PASSWORD :` (password **A**, uppercase), then `DATE YYMMDD` and
+`TIME HHMMSS` (keypad digits and keypad Enter), then `/SYS`.
+
+Two things it needs that stock MAME does not have:
+
+- The Z8001 and GO252 fixes on the `m40_z8010_sup_test` branch of
+  [tpaxia/mame](https://github.com/tpaxia/mame) (PC-segment bit 15, keyboard
+  port reset).
+- A ROM that can boot from the GO363. ROM 6.0 cannot. The image was tested
+  with the experimental `m40rom-6.0-hd65` ROM built by `tools/mkrom_hd65.py`
+  in the L1 M40 project (ROM 6.0 plus a GO363 boot routine); that ROM is not
+  an Olivetti release and is not in MAME.
+
+```sh
+mame m40 -ram 2m -slot5 go363 -hard1 hard\m40\m40-bcos-hd-kusa.chd
+```
+
+Set the console IPL switch to **ISL1 - Hard Disk**. Work on a copy: the
+system writes to the disk.
+
 ## Images not included
 
 - MDOSC 2.0, 3.1, and 3.2 load but stop or cycle on ERROR 172/173.
