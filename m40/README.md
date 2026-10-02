@@ -89,11 +89,58 @@ mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -rompath roms\m40-hd65
 press F12 before using Tab or other MAME keys, and F12 again afterwards.
 **Alt+C** clears a keyboard error (`E` or `KE` at the bottom left).
 
+## MOS on the hard disk (WREN2, GO363)
+
+`m40-mos-hd.chd` is a 65 MB WREN2 image (1024 cylinders, 9 heads, 32 sectors
+of 256 bytes) holding Olivetti MOS release 5.2.15. It was installed in MAME
+from the `StarterST506` floppy and the seven `DPC_ALLES` floppies, using the
+install menu on the starter (SYS_INSTALL, DPC_INSTALL, USR_INSTALL,
+CHM_INSTALL, then SHUTDOWN). The kit is a dealer-prepared one, so the install
+scripts print German text; MOS itself is in English.
+
+Sectors 0-6 hold the standard Olivetti hard-disk loader (LDHSEL, written by
+diagnostic `LDHSE2` on DCOS disk A). It was added after the install rather
+than before it; the bytes are the ones the diagnostic writes.
+
+It needs the same MAME branch, boot ROM and control profile as the BCOS
+image above (see "What it needs"). The branch also carries the bus-arbiter
+and floppy-DMA fixes that MOS depends on.
+
+### Run MOS from the hard disk
+
+Work on a copy of the image: the system writes to the disk.
+
+```bat
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -rompath roms\m40-hd65 -slot5 go363 -hard1 hard\m40\m40-mos-hd.chd
+```
+
+1. Dismiss the MAME startup warning.
+2. Check the status bar: it must show **HD**. If it shows **FLOPPY**, click it
+   to select **HD**, then press F12, Shift+F3, F12 to restart.
+3. Wait for `OLIVETTI MOS SYSTEM - REL 5.2.15` and `ENTER USER-NAME :` (about
+   three minutes of machine time).
+4. Type **root** and press **Enter**. Letters typed without Shift appear as
+   capitals, so the screen shows `ROOT`. There is no password.
+5. The first login after a boot asks for the date and time. Type the date as
+   **MM/DD/YY** with the slashes (e.g. **10/02/87**) and press Enter, then the
+   time as **HH/MM/SS** (e.g. **10/30/00**) and press Enter.
+6. `ENTER USER-NAME :` comes back. Type **root** and press Enter again.
+7. A menu appears. Type **6** and press Enter for **MCL**, the command shell.
+   The prompt is `1 ROOT :`; `ls` lists the current directory.
+
+Menu items 2 to 5 are the installer steps and are not needed again. To stop
+the system, type **logout** in MCL to return to the menu, choose **7**
+(SHUTDOWN), answer the delay prompt (e.g. **5**), and wait for
+`SYSTEM IS CLOSED DOWN` before closing MAME.
+
+**F12** toggles the MAME UI controls. Keep them off while typing to MOS.
+
 ## Images not included
 
 - MDOSC 2.0, 3.1, and 3.2 load but stop or cycle on ERROR 172/173.
 - BCOS II 5.0 reaches a system-environment page but no usable prompt.
-- MOS `StarterST506.IMD` does not reach a console.
+- The MOS `StarterST506` and `DPC` install floppies are not included; the
+  installed system is in `m40-mos-hd.chd`.
 - BCOS companion, keyboard, and blank media are not independently bootable.
 
 Detailed evidence and scripts are in

@@ -59,6 +59,13 @@ holds `m40-bcos-hd-kusa.chd`, a WREN2 (GO363) image with BCOS II installed.
 It needs a patched MAME branch and an experimental boot ROM; the M40 README
 has the launch command and the login steps.
 
+## Olivetti M40 — MOS on the hard disk
+
+The [`m40`](m40/README.md#mos-on-the-hard-disk-wren2-go363) folder also holds
+`m40-mos-hd.chd`, a WREN2 (GO363) image with Olivetti MOS 5.2.15 installed. It
+needs the same patched MAME branch and boot ROM as the BCOS hard-disk image;
+the M40 README has the launch command and login steps.
+
 ## Olivetti M40 — BCOS
 
 Boot the M40, open BASIC, or generate a new BCOS system from scratch.
