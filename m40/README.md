@@ -55,11 +55,13 @@ utility (`VARM KUSA` on the keyboard record), so a US keyboard types QWERTY.
 - MAME built from the `m40_z8010_sup_test` branch of
   [tpaxia/mame](https://github.com/tpaxia/mame), which has the Z8001 and
   keyboard-port fixes this system depends on.
-- A ROM that can boot from the GO363. ROM 6.0 cannot. Use the experimental
-  `m40rom-6.0-hd65` ROM built by `tools/mkrom_hd65.py` in the L1 M40 project
-  (ROM 6.0 plus a GO363 boot routine; not an Olivetti release, not in MAME).
-  Put it in its own folder as `roms-hd65\m40\m40rom-6.0.bin` and pass that
-  folder with `-rompath`. MAME warns that the checksum does not match.
+- A ROM that can boot from the GO363. ROM 6.0 cannot. The experimental ROM is
+  included here as [`roms/m40-hd65/m40/m40rom-6.0.bin`](roms/m40-hd65/m40/m40rom-6.0.bin):
+  ROM 6.0 plus a GO363 boot routine, built by `tools/mkrom_hd65.py` in the L1
+  M40 project. It is not an Olivetti release. Copy the whole `m40-hd65`
+  folder into MAME's `roms` folder, giving `roms\m40-hd65\m40\m40rom-6.0.bin`,
+  and leave the normal `roms\m40` set as it is. The launch command selects it
+  with `-rompath roms\m40-hd65`; MAME warns that the checksum does not match.
 - The M40 control profile: copy [m40-ui.cfg](../BCOS/m40-ui.cfg) into MAME's
   `ctrlr` folder.
 
@@ -68,7 +70,7 @@ utility (`VARM KUSA` on the keyboard record), so a US keyboard types QWERTY.
 Work on a copy of the image: the system writes to the disk.
 
 ```bat
-mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -rompath roms-hd65 -slot5 go363 -hard1 hard\m40\m40-bcos-hd-kusa.chd
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -rompath roms\m40-hd65 -slot5 go363 -hard1 hard\m40\m40-bcos-hd-kusa.chd
 ```
 
 1. Dismiss the MAME startup warning.
