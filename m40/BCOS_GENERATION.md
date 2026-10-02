@@ -11,7 +11,7 @@ disk. The generated LOAD and RUN pair is what you boot thereafter. See
 | `K02733_BCOS_II_3.3_CONFIGURATOR.imd` | Creates the system |
 | `K02741_BCOS_II_3.3_JJKEYB.imd` | Supplies the keyboard files |
 
-Download any missing images from the [BCOS folder](./) in this repository.
+Download any missing images from the [`m40` folder](./) in this repository.
 
 ## 1. Prepare working disks
 

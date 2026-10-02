@@ -40,40 +40,11 @@ mame m20 \
 
 Use working copies of the images if you want to keep these originals pristine.
 
-## Olivetti M40 — bootable floppy media
+## Olivetti M40
 
-The [`m40`](m40/README.md) folder collects the IMD images verified to boot to a
-usable screen or prompt: ESE, MDOS, BCOS II 3.3, the generated BCOS LOAD/RUN
-pair, Gardini utilities, and the DCOS 8.4 diagnostic set.
-
-For example, boot ESE with:
-
-```sh
-mame m40 -ram 2m -flop1 flop\m40\ESE.IMD
-```
-
-## Olivetti M40 — BCOS II on the hard disk
-
-The [`m40`](m40/README.md#bcos-ii-on-the-hard-disk-wren2-go363) folder also
-holds `m40-bcos-hd-kusa.chd`, a WREN2 (GO363) image with BCOS II installed.
-It needs a patched MAME branch and an experimental boot ROM; the M40 README
-has the launch command and the login steps.
-
-## Olivetti M40 — MOS on the hard disk
-
-The [`m40`](m40/README.md#mos-on-the-hard-disk-wren2-go363) folder also holds
-`m40-mos-hd.chd`, a WREN2 (GO363) image with Olivetti MOS 5.2.15 installed. It
-needs the same patched MAME branch and boot ROM as the BCOS hard-disk image;
-the M40 README has the launch command and login steps.
-
-## Olivetti M40 — BCOS
-
-Boot the M40, open BASIC, or generate a new BCOS system from scratch.
-
-[Windows quick start](BCOS/BCOS_WINDOWS_BASIC.md) ·
-[BCOS generation](BCOS/BCOS_GENERATION.md) ·
-[M40 ANK keyboard map](BCOS/M40_KEYBOARD.md) ·
-[ESE keyboard overlay](BCOS/M40_ESE_KEYBOARD.md)
+Various operating systems run on the M40: ESE, MDOS, BCOS II and MOS, along
+with the DCOS diagnostics and a utility disk. See the
+[M40 page](m40/README.md).
 
 ## Olivetti P6066 — ESE
 

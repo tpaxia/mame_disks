@@ -19,7 +19,7 @@ istruzioni.** Scaricare o copiare soltanto ciò che manca.
   procurarsi la ROM separatamente: non è inclusa né nei sorgenti dell'emulatore
   né in questo archivio di dischi.
 - **Dischi BCOS:** le immagini elencate sotto, nella cartella `flop` di MAME.
-  Scaricare quelle mancanti dalla [cartella BCOS di questo repository](./)
+  Scaricare quelle mancanti dalla [cartella `m40` di questo repository](./)
   e copiarle lì. Creare `flop` se necessario. Le prime due servono per
   configurare un nuovo sistema; le altre due per avviare il sistema fornito.
 - **Una tastiera PC con tastierino numerico.**
