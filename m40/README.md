@@ -117,7 +117,7 @@ described under [Windows instructions](#windows-instructions).
 Work on a copy of the image: the system writes to the disk.
 
 ```bat
-mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -rompath roms\m40-hd65 -slot5 go363 -hard1 hard\m40\m40-bcos-hd-kusa.chd
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -rompath "roms\m40-hd65;roms" -slot5 go363 -hard1 hard\m40\m40-bcos-hd-kusa.chd
 ```
 
 1. Dismiss the MAME startup warning.
@@ -164,7 +164,7 @@ carries the bus-arbiter and floppy-DMA fixes that MOS depends on.
 Work on a copy of the image: the system writes to the disk.
 
 ```bat
-mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -rompath roms\m40-hd65 -slot5 go363 -hard1 hard\m40\m40-mos-hd.chd
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -rompath "roms\m40-hd65;roms" -slot5 go363 -hard1 hard\m40\m40-mos-hd.chd
 ```
 
 1. Dismiss the MAME startup warning.
@@ -248,14 +248,18 @@ HELP.
 - MAME built from the `m40_z8010_sup_test` branch of
   [tpaxia/mame](https://github.com/tpaxia/mame). The hard-disk systems depend
   on its Z8001, keyboard-port, bus-arbiter and floppy-DMA fixes.
-- The M40 ROM 6.0 (`m40rom-6.0.bin`) in MAME's `roms\m40` folder. It is not
-  included here. The floppy systems need nothing else.
+- The M40 ROM set in MAME's `roms\m40` folder (or `roms\m40.zip`): the
+  system ROM 6.0 (`m40rom-6.0.bin`) and the GO252 character generator
+  (`9428ds-2067.bin`). Neither is included here. MAME will not start the M40
+  without the character generator. The floppy systems need nothing else.
 - For the hard-disk systems only, a ROM that can boot from the GO363. ROM 6.0
   cannot. The experimental ROM is included here as [`roms/m40-hd65/m40/m40rom-6.0.bin`](roms/m40-hd65/m40/m40rom-6.0.bin):
   ROM 6.0 plus a GO363 boot routine. It is not an Olivetti release. Copy the
   whole `m40-hd65` folder into MAME's `roms` folder, giving `roms\m40-hd65\m40\m40rom-6.0.bin`,
-  and leave the normal `roms\m40` set as it is. The launch command selects it
-  with `-rompath roms\m40-hd65`; MAME warns that the checksum does not match.
+  and leave the normal `roms\m40` set as it is. The launch command uses
+  `-rompath "roms\m40-hd65;roms"`: MAME takes the system ROM from
+  `roms\m40-hd65` and the character generator from the normal `roms\m40`
+  set. It warns that the system ROM's checksum does not match.
 - The M40 control profile: copy [m40-ui.cfg](m40-ui.cfg) into MAME's
   `ctrlr` folder.
 - The disk images: copy the floppy images into MAME's `flop\m40` folder and
