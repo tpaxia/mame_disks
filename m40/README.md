@@ -50,25 +50,42 @@ The only change from that install is the keyboard map: the system was booted
 and its configuration changed from `KITA` to `KUSA` with the OSLEM `COS#`
 utility (`VARM KUSA` on the keyboard record), so a US keyboard types QWERTY.
 
-It boots to `PASSWORD :` (password **A**, uppercase), then `DATE YYMMDD` and
-`TIME HHMMSS` (keypad digits and keypad Enter), then `/SYS`.
+### What it needs
 
-Two things it needs that stock MAME does not have:
+- MAME built from the `m40_z8010_sup_test` branch of
+  [tpaxia/mame](https://github.com/tpaxia/mame), which has the Z8001 and
+  keyboard-port fixes this system depends on.
+- A ROM that can boot from the GO363. ROM 6.0 cannot. Use the experimental
+  `m40rom-6.0-hd65` ROM built by `tools/mkrom_hd65.py` in the L1 M40 project
+  (ROM 6.0 plus a GO363 boot routine; not an Olivetti release, not in MAME).
+  Put it in its own folder as `roms-hd65\m40\m40rom-6.0.bin` and pass that
+  folder with `-rompath`. MAME warns that the checksum does not match.
+- The M40 control profile: copy [m40-ui.cfg](../BCOS/m40-ui.cfg) into MAME's
+  `ctrlr` folder.
 
-- The Z8001 and GO252 fixes on the `m40_z8010_sup_test` branch of
-  [tpaxia/mame](https://github.com/tpaxia/mame) (PC-segment bit 15, keyboard
-  port reset).
-- A ROM that can boot from the GO363. ROM 6.0 cannot. The image was tested
-  with the experimental `m40rom-6.0-hd65` ROM built by `tools/mkrom_hd65.py`
-  in the L1 M40 project (ROM 6.0 plus a GO363 boot routine); that ROM is not
-  an Olivetti release and is not in MAME.
+### Run BCOS from the hard disk
 
-```sh
-mame m40 -ram 2m -slot5 go363 -hard1 hard\m40\m40-bcos-hd-kusa.chd
+Work on a copy of the image: the system writes to the disk.
+
+```bat
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -rompath roms-hd65 -slot5 go363 -hard1 hard\m40\m40-bcos-hd-kusa.chd
 ```
 
-Set the console IPL switch to **ISL1 - Hard Disk**. Work on a copy: the
-system writes to the disk.
+1. Dismiss the MAME startup warning.
+2. Check the status bar: it must show **HD**. If it shows **FLOPPY**, click it
+   to select **HD**, then press F12, Shift+F3, F12 to restart.
+3. Wait for the **B.C.O.S. II** banner and `PASSWORD :` (about three minutes
+   of machine time).
+4. Enter the password **A** (Shift+A), then **keypad Enter**.
+5. At `DATE YYMMDD`, type the date with keypad digits (e.g. **860909**) and
+   press **keypad Enter**.
+6. At `TIME HHMMSS`, type the time with keypad digits (e.g. **120000**) and
+   press **keypad Enter**.
+7. Wait for **/SYS**.
+
+**F12** toggles the MAME UI controls. Keep them off while typing to BCOS:
+press F12 before using Tab or other MAME keys, and F12 again afterwards.
+**Alt+C** clears a keyboard error (`E` or `KE` at the bottom left).
 
 ## Images not included
 

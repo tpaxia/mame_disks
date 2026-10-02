@@ -52,6 +52,13 @@ For example, boot ESE with:
 mame m40 -ram 2m -flop1 flop\m40\ESE.IMD
 ```
 
+## Olivetti M40 — BCOS II on the hard disk
+
+The [`m40`](m40/README.md#bcos-ii-on-the-hard-disk-wren2-go363) folder also
+holds `m40-bcos-hd-kusa.chd`, a WREN2 (GO363) image with BCOS II installed.
+It needs a patched MAME branch and an experimental boot ROM; the M40 README
+has the launch command and the login steps.
+
 ## Olivetti M40 — BCOS
 
 Boot the M40, open BASIC, or generate a new BCOS system from scratch.
