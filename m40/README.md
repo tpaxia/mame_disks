@@ -49,12 +49,14 @@ In MOS, letters typed without Shift appear as capitals.
 |---|---|
 | `ESE.IMD` | ESE 3.1 boots to `READY` |
 
-```sh
-mame m40 -ram 2m -flop1 flop\m40\ESE.IMD
+```bat
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 flop\m40\ESE.IMD
 ```
 
-Use ROM 6.0, 2 MB RAM and the floppy IPL setting. The key meanings are in the
-[ESE keyboard overlay](M40_ESE_KEYBOARD.md).
+Use ROM 6.0, 2 MB RAM and the floppy IPL setting. `-uimodekey F12 -ctrlr
+m40-ui` makes **F12** the key that turns the MAME UI controls on and off, so
+the other keys reach the M40; every command on this page uses it. The key
+meanings are in the [ESE keyboard overlay](M40_ESE_KEYBOARD.md).
 
 ## MDOS
 
@@ -63,8 +65,8 @@ Use ROM 6.0, 2 MB RAM and the floppy IPL setting. The key meanings are in the
 | `MDOS30.IMD` | German ESE/MDOS 3.0 boots to `READY` |
 | `MDOSUTIL.IMD` | MDOS 3.1 utility system boots to `READY` |
 
-```sh
-mame m40 -ram 2m -flop1 flop\m40\MDOS30.IMD
+```bat
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 flop\m40\MDOS30.IMD
 ```
 
 ## BCOS II
@@ -192,8 +194,8 @@ The `diagnostics` directory contains the boot-tested DCOS 8.4 diagnostic set:
 `A.IMD` through `H.IMD`, plus `R.IMD`. Each disk boots to the diagnostic
 monitor, from which a test program is loaded by its code.
 
-```sh
-mame m40 -ram 2m -flop1 flop\m40\diagnostics\A.IMD
+```bat
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 flop\m40\diagnostics\A.IMD
 ```
 
 ![Diagnostic monitor menu](screenshots/diagnostic-monitor-menu.png)
@@ -219,8 +221,8 @@ program and lists every program on each disk with its code.
 |---|---|
 | `Gardini_Utilities.imd` | Boots to the Gardini NLS3000 utility menu |
 
-```sh
-mame m40 -ram 2m -flop1 flop\m40\Gardini_Utilities.imd
+```bat
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 flop\m40\Gardini_Utilities.imd
 ```
 
 The disk is a floppy-disk utility dated 16 December 1982. It shows the

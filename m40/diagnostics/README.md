@@ -18,8 +18,8 @@ test programs for one part of the machine.
 
 ## Running a diagnostic
 
-```sh
-mame m40 -ram 2m -flop1 flop\m40\diagnostics\A.IMD
+```bat
+mame.exe m40 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -flop1 flop\m40\diagnostics\A.IMD
 ```
 
 1. Boot with the IPL source set to **FLOPPY**. The disk shows the
