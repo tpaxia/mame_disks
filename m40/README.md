@@ -250,8 +250,11 @@ HELP.
   on its Z8001, keyboard-port, bus-arbiter and floppy-DMA fixes.
 - The M40 ROM set in MAME's `roms\m40` folder (or `roms\m40.zip`): the
   system ROM 6.0 (`m40rom-6.0.bin`) and the GO252 character generator
-  (`9428ds-2067.bin`). Neither is included here. MAME will not start the M40
-  without the character generator. The floppy systems need nothing else.
+  (`9428ds-2067.bin`). MAME will not start the M40 without the character
+  generator. It is included here as
+  [`roms/m40/9428ds-2067.bin`](roms/m40/9428ds-2067.bin): copy it into MAME's
+  `roms\m40` folder. The system ROM 6.0 is not included. The floppy systems
+  need nothing else.
 - For the hard-disk systems only, a ROM that can boot from the GO363. ROM 6.0
   cannot. The experimental ROM is included here as [`roms/m40-hd65/m40/m40rom-6.0.bin`](roms/m40-hd65/m40/m40rom-6.0.bin):
   ROM 6.0 plus a GO363 boot routine. It is not an Olivetti release. Copy the
