@@ -79,9 +79,6 @@ mame m40 -ram 2m -flop1 flop\m40\MDOS30.IMD
 | `BCOS_EMPTY.imd`, `BCOS_EMPTY_CLEAN.imd`, `BCOS_EMPTY_8DSDD_20260910.mfi` | Blank media for system generation |
 | `m40-bcos-hd-kusa.chd` | BCOS II multi-user system on the hard disk; boots to `/SYS` |
 
-K02733 may require the BCOS FD1/controller-unit arrangement documented in the
-L1 M40 project. The project launch scripts should be preferred for BCOS work.
-
 ### System generation
 
 [BCOS generation](BCOS_GENERATION.md) walks through creating a BCOS II
@@ -242,10 +239,6 @@ HELP.
   installed system is in `m40-mos-hd.chd`.
 - BCOS companion, keyboard, and blank media are not independently bootable.
 
-Detailed evidence and scripts are in
-[tpaxia/l1_m40](https://github.com/tpaxia/l1_m40), particularly
-`re/OS_boot_media_survey.md` and `BCOS_BOOT.md`.
-
 ## Windows instructions
 
 ### What it needs
@@ -257,9 +250,8 @@ Detailed evidence and scripts are in
   included here. The floppy systems need nothing else.
 - For the hard-disk systems only, a ROM that can boot from the GO363. ROM 6.0
   cannot. The experimental ROM is included here as [`roms/m40-hd65/m40/m40rom-6.0.bin`](roms/m40-hd65/m40/m40rom-6.0.bin):
-  ROM 6.0 plus a GO363 boot routine, built by `tools/mkrom_hd65.py` in the L1
-  M40 project. It is not an Olivetti release. Copy the whole `m40-hd65`
-  folder into MAME's `roms` folder, giving `roms\m40-hd65\m40\m40rom-6.0.bin`,
+  ROM 6.0 plus a GO363 boot routine. It is not an Olivetti release. Copy the
+  whole `m40-hd65` folder into MAME's `roms` folder, giving `roms\m40-hd65\m40\m40rom-6.0.bin`,
   and leave the normal `roms\m40` set as it is. The launch command selects it
   with `-rompath roms\m40-hd65`; MAME warns that the checksum does not match.
 - The M40 control profile: copy [m40-ui.cfg](m40-ui.cfg) into MAME's

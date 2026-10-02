@@ -4,8 +4,8 @@ Copies of the source media; the source media are unchanged.
 
 | Image | Original source |
 |---|---|
-| BCOS_II_3.3_FD_ALL_RESIDENT.imd | /Users/paxia/Projects/L1_M30_M40/docs/Disk Images/BCOS_II_3.3_FD_ALL_RESIDENT.imd |
-| K02733_BCOS_II_3.3_CONFIGURATOR.imd | /Users/paxia/Projects/L1_M30_M40/docs/Disk Images/K02733_BCOS_II_3.3_CONFIGURATOR.imd |
+| BCOS_II_3.3_FD_ALL_RESIDENT.imd | Disk Images/BCOS_II_3.3_FD_ALL_RESIDENT.imd |
+| K02733_BCOS_II_3.3_CONFIGURATOR.imd | Disk Images/K02733_BCOS_II_3.3_CONFIGURATOR.imd |
 | K02741_BCOS_II_3.3_JJKEYB.imd | /Users/paxia/Projects/mame_latest/mame/flop/K02741_BCOS_II_3.3_JJKEYB.imd |
 | BCOS_LOAD.imd | /Users/paxia/Projects/mame_latest/mame/flop/BCOS_LOAD.imd |
 | BCOS_RUN.imd | /Users/paxia/Projects/mame_latest/mame/flop/BCOS_RUN.imd |
