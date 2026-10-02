@@ -102,6 +102,12 @@ Sectors 0-6 hold the standard Olivetti hard-disk loader (LDHSEL, written by
 diagnostic `LDHSE2` on DCOS disk A). It was added after the install rather
 than before it; the bytes are the ones the diagnostic writes.
 
+The installed software (the 28 entries of `/IPL/DPC`: shell commands, BASIC,
+Fortran 77, the PASCAL+ compiler and its tools, the editor, graphics, ESE)
+is listed in this table:
+
+![MOS 5.2.15 installed software](mos-installed-software.png)
+
 It needs the same MAME branch, boot ROM and control profile as the BCOS
 image above (see "What it needs"). The branch also carries the bus-arbiter
 and floppy-DMA fixes that MOS depends on.
