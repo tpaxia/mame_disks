@@ -1,0 +1,25 @@
+STATE time=0.016666667 PC=8019 LEVEL=3 STOPPED=0 INVALID=0 sectors=0 display=0 ready=0 lamps=FFFF write=0 erase=0
+STATE time=5.000000000 PC=8198 LEVEL=4 STOPPED=0 INVALID=0 sectors=0 display=0 ready=0 lamps=FFFF write=0 erase=0
+STATE time=10.000000000 PC=8366 LEVEL=4 STOPPED=0 INVALID=16 sectors=204 display=0 ready=0 lamps=FFFF write=0 erase=0
+STATE time=10.833333333 PC=1034 LEVEL=4 STOPPED=0 INVALID=16 sectors=281 display=0 ready=0 lamps=0000 write=0 erase=0
+STATE time=15.000000000 PC=B020 LEVEL=4 STOPPED=0 INVALID=16 sectors=467 display=0 ready=0 lamps=0000 write=0 erase=0
+STATE time=16.700000000 PC=A113 LEVEL=3 STOPPED=0 INVALID=16 sectors=479 display=224 ready=1 lamps=0000 write=0 erase=0
+STATE time=20.000000000 PC=A113 LEVEL=3 STOPPED=0 INVALID=16 sectors=479 display=224 ready=1 lamps=0000 write=0 erase=0
+STATE time=25.000000000 PC=B01F LEVEL=4 STOPPED=0 INVALID=16 sectors=479 display=224 ready=1 lamps=0000 write=0 erase=0
+STATE time=25.216666667 PC=9A64 LEVEL=4 STOPPED=0 INVALID=16 sectors=479 display=672 ready=1 lamps=0002 write=0 erase=0
+STATE time=25.683333333 PC=A10D LEVEL=3 STOPPED=0 INVALID=16 sectors=480 display=672 ready=1 lamps=0002 write=1 erase=1
+STATE time=25.700000000 PC=9972 LEVEL=4 STOPPED=0 INVALID=16 sectors=481 display=672 ready=1 lamps=0002 write=0 erase=0
+STATE time=26.050000000 PC=8AB1 LEVEL=4 STOPPED=0 INVALID=16 sectors=483 display=870 ready=0 lamps=0002 write=0 erase=0
+STATE time=26.066666667 PC=BA26 LEVEL=4 STOPPED=0 INVALID=16 sectors=483 display=896 ready=1 lamps=0002 write=0 erase=0
+STATE time=30.000000000 PC=A112 LEVEL=3 STOPPED=0 INVALID=16 sectors=483 display=896 ready=1 lamps=0002 write=0 erase=0
+STATE time=35.000000000 PC=B01E LEVEL=4 STOPPED=0 INVALID=16 sectors=483 display=896 ready=1 lamps=0002 write=0 erase=0
+STATE time=40.000000000 PC=BA19 LEVEL=4 STOPPED=0 INVALID=16 sectors=483 display=896 ready=1 lamps=0002 write=0 erase=0
+STATE time=40.233333333 PC=BFA5 LEVEL=4 STOPPED=0 INVALID=16 sectors=483 display=1344 ready=1 lamps=0002 write=0 erase=0
+STATE time=40.250000000 PC=B53A LEVEL=4 STOPPED=0 INVALID=16 sectors=483 display=1568 ready=1 lamps=0002 write=0 erase=0
+STATE time=40.350000000 PC=A0C3 LEVEL=3 STOPPED=0 INVALID=16 sectors=483 display=1568 ready=1 lamps=0080 write=0 erase=0
+STATE time=45.000000000 PC=ACF7 LEVEL=4 STOPPED=0 INVALID=16 sectors=483 display=1568 ready=1 lamps=0080 write=0 erase=0
+STATE time=50.000000000 PC=A85A LEVEL=3 STOPPED=0 INVALID=16 sectors=483 display=1568 ready=1 lamps=0080 write=0 erase=0
+STATE time=55.000000000 PC=B0D1 LEVEL=4 STOPPED=0 INVALID=16 sectors=483 display=1568 ready=1 lamps=0080 write=0 erase=0
+STATE time=60.000000000 PC=B09C LEVEL=4 STOPPED=0 INVALID=16 sectors=483 display=1568 ready=1 lamps=0080 write=0 erase=0
+FINAL time=60.000000000 PC=B09C LEVEL=4 STOPPED=0 INVALID=16 sectors=483 display=1568 ready=1 lamps=0080 write=0 erase=0
+Average speed: 234.58% (59 seconds)

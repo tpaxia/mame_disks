@@ -1,0 +1,18 @@
+{
+  "source_floppy": {
+    "path": "/Users/paxia/Projects/L1_M30_M40/reference/images/hd-utilities/hduutilities.imd",
+    "sha256": "3febce41bcc5d1bada32374bc5e38a9c06e1d7e8f508f9e1e9c86a6e48038968"
+  },
+  "working_floppy_initial": {
+    "path": "/Users/paxia/Projects/P6066/analysis/hardware/hdu/utilities-fixed-format-run/utilities.imd",
+    "sha256": "3febce41bcc5d1bada32374bc5e38a9c06e1d7e8f508f9e1e9c86a6e48038968"
+  },
+  "blank_chd_initial": {
+    "path": "/Users/paxia/Projects/P6066/analysis/hardware/hdu/utilities-fixed-format-run/blank.chd",
+    "sha256": "ea06ac0cef7769bbdeb3c41f296bb033b66477e6c48391dad648d834d6e1e326"
+  },
+  "emulator": {
+    "path": "/Users/paxia/Projects/P6066/mame/p6066",
+    "sha256": "edc1945fc2c144ce61dc2562aca440163e786f528acd17c13b59e29868ca7276"
+  }
+}

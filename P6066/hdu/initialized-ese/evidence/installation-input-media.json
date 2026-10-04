@@ -1,0 +1,11 @@
+{
+  "SYSDIS.chd": {
+    "sha256": "74efc464873ef60ac051f6d7ac6fa362f8e90f2df1905c133dca18122c5ad26b"
+  },
+  "generator.imd": {
+    "sha256": "e5f901de557327c9b8e29a20855a6f17480f5ecdac6cf4d78f3a432572907c6d"
+  },
+  "master.imd": {
+    "sha256": "f2df2e238463f06c87a31b37e319294ccc060e1f3ccad62d0d0bbdaf31df7778"
+  }
+}

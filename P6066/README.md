@@ -36,14 +36,21 @@ mame p6066 -bus:video go011 \
 
 Replace `067.IMD` with any system floppy.
 
-## HDU boot
+## HDU preparation, installation and boot
+
+The [HDU package](hdu/initialized-ese/README.md) contains the clean HDI-initialized image,
+the newly installed ESE HDU and its matching bootstrap floppy, original input
+media, checksums, and complete reproduction instructions. It was generated
+and cold-booted with the current keyboard implementation and PR 6610 attached.
 
 ```sh
-mame p6066 \
-  -bus:dma rodma -bus:hdu difo -bus:video go011 -uimodekey F12 \
-  -hard1 hard\p6066\P6066_HDU_10MB_INSTALLED.chd \
-  -flop2 flop\p6066\P6066_HDU_BOOTSTRAP.IMD -window
+./P6066/hdu/initialized-ese/boot-p6066.sh
 ```
+
+Run this from the `mame_disks` repository root. The launcher uses working
+copies and defaults to the emulator in `~/Projects/P6066`. Set `P6066_PROJECT`
+for a different emulator checkout. See the package instructions for manual
+mounting and the observed startup messages.
 
 ## Keyboard
 

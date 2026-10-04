@@ -1,0 +1,12 @@
+TYPE exe dks,in=fdu1
+TYPE hdu,a0,hd
+TYPE fdu,c0,fdu1
+TYPE fdu,c1,fdu2
+TYPE *
+TYPE test
+TYPE l
+CONTINUE
+CONTINUE
+TYPE y
+CONTINUE
+EXIT

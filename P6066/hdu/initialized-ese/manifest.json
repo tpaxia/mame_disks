@@ -1,0 +1,160 @@
+{
+  "copyright-holders": "Salvatore Paxia",
+  "date": "2026-10-04",
+  "geometry": {
+    "cylinders": 202,
+    "heads": 4,
+    "sectors_per_head": 48,
+    "sector_bytes": 256
+  },
+  "media": {
+    "HDU2110-initialized.chd": {
+      "bytes": 9940992,
+      "sha256": "74efc464873ef60ac051f6d7ac6fa362f8e90f2df1905c133dca18122c5ad26b"
+    },
+    "SYSDIS.chd": {
+      "bytes": 9940992,
+      "sha256": "eb2d207d9eebacc4d5aa7a1ea991356c804b840a34dd4b103116421057cc514e"
+    },
+    "SYSBTS.imd": {
+      "bytes": 240894,
+      "sha256": "4a9cc4b51f118b322b001c1b50d98ba8d8f696284ec5ece1cd591976a4be3de5"
+    },
+    "inputs/generator-064.imd": {
+      "bytes": 246990,
+      "sha256": "e5f901de557327c9b8e29a20855a6f17480f5ecdac6cf4d78f3a432572907c6d"
+    },
+    "inputs/hduutilities.imd": {
+      "bytes": 239647,
+      "sha256": "3febce41bcc5d1bada32374bc5e38a9c06e1d7e8f508f9e1e9c86a6e48038968"
+    },
+    "inputs/master-068.imd": {
+      "bytes": 245571,
+      "sha256": "f2df2e238463f06c87a31b37e319294ccc060e1f3ccad62d0d0bbdaf31df7778"
+    },
+    "historical/SYSDIS.chd": {
+      "bytes": 9940992,
+      "sha256": "eb2d207d9eebacc4d5aa7a1ea991356c804b840a34dd4b103116421057cc514e"
+    },
+    "historical/SYSBTS.imd": {
+      "bytes": 240894,
+      "sha256": "a4db09104efd7e78c83d213e8345bd4533f24294ba0afbc56e6171245818fae3"
+    }
+  },
+  "initialized_payload_sha256": "f23dc2d0f25d41e5441017e7323eba115d98564001a7e91a80b8735c4f4b51df",
+  "installed_payload_sha256": "877925a4df9bd2acee08d0c84aa03915039fa112a4046ef1cb9ec05d7884b18f",
+  "installation_emulator": {
+    "revision": "cd00a82cf845e08ee0a6fe884554ce55c15fa6a4",
+    "local_changes": "HDI FORMAT compatibility correction only",
+    "executable_sha256": "edc1945fc2c144ce61dc2562aca440163e786f528acd17c13b59e29868ca7276",
+    "printer": "pr6610",
+    "keyboard": "reset BASIC, unshifted letters, END OF LINE; no mode toggle"
+  },
+  "current_emulator_sha256": "edc1945fc2c144ce61dc2562aca440163e786f528acd17c13b59e29868ca7276",
+  "password": "TEST",
+  "source_ROM_files": {
+    "analysis/mame-p6066/roms/p6066/carom.bin": "e31fe2540115342122525de12a805aa3307cb19fe8593dc0f572887d136b8519"
+  },
+  "bootstrap_firmware_comparison": {
+    "K0E002": {
+      "bytes": 33280,
+      "sha256": "c9139ec93fb03de0d8cf4b4e69b6a5475a10982c383a4f6eda9a8f64ecba3153",
+      "equals_previous_successful_bootstrap": true
+    },
+    "K0E003": {
+      "bytes": 20736,
+      "sha256": "916b30780cdd194354beb7d43fe2ef1a25c474910d3bb69823249fabfb848fb2",
+      "equals_previous_successful_bootstrap": true
+    },
+    "K0E001": {
+      "bytes": 4096,
+      "sha256": "74bf31facacbc1625f31b1cc6db23136c60a78b251c8dab7074bfc156a2c950a",
+      "equals_previous_successful_bootstrap": true
+    }
+  },
+  "installation_result": {
+    "emulator_revision": "cd00a82cf845e08ee0a6fe884554ce55c15fa6a4 plus HDI format correction",
+    "emulator_sha256": "edc1945fc2c144ce61dc2562aca440163e786f528acd17c13b59e29868ca7276",
+    "printer": "pr6610",
+    "keyboard": "reset BASIC, unshifted alphabetic keys, main END OF LINE; no KB MODE toggle",
+    "outputs": {
+      "SYSDIS.chd": {
+        "bytes": 9940992,
+        "sha256": "eb2d207d9eebacc4d5aa7a1ea991356c804b840a34dd4b103116421057cc514e",
+        "equals_historical_container": true
+      },
+      "SYSBTS.imd": {
+        "bytes": 240894,
+        "sha256": "4a9cc4b51f118b322b001c1b50d98ba8d8f696284ec5ece1cd591976a4be3de5",
+        "equals_historical_container": false
+      }
+    },
+    "operations": [
+      {
+        "op": "05",
+        "errors": "00",
+        "count": 101
+      },
+      {
+        "op": "09",
+        "errors": "00",
+        "count": 422
+      },
+      {
+        "op": "13",
+        "errors": "00",
+        "count": 422
+      }
+    ],
+    "end_of_generation": true,
+    "firmware": {
+      "K0E002": {
+        "bytes": 33280,
+        "sha256": "c9139ec93fb03de0d8cf4b4e69b6a5475a10982c383a4f6eda9a8f64ecba3153",
+        "equals_historical_dataset": true
+      },
+      "K0E003": {
+        "bytes": 20736,
+        "sha256": "916b30780cdd194354beb7d43fe2ef1a25c474910d3bb69823249fabfb848fb2",
+        "equals_historical_dataset": true
+      },
+      "K0E001": {
+        "bytes": 4096,
+        "sha256": "74bf31facacbc1625f31b1cc6db23136c60a78b251c8dab7074bfc156a2c950a",
+        "equals_historical_dataset": true
+      }
+    }
+  },
+  "cold_boot": {
+    "ready": true,
+    "printer": "pr6610",
+    "keyboard": "current production implementation, unchanged",
+    "operations": [
+      {
+        "op": "05",
+        "errors": "00",
+        "count": 14
+      },
+      {
+        "op": "09",
+        "errors": "00",
+        "count": 1
+      },
+      {
+        "op": "13",
+        "errors": "00",
+        "count": 1
+      }
+    ],
+    "first_ready_emulated_seconds": 19.583333333,
+    "final_emulated_seconds": 60,
+    "display_transcript": "READY\n",
+    "host_inputs": "",
+    "printed_messages": [
+      "ERROR 154 ON UNIT FDU1",
+      "ERROR 173"
+    ],
+    "console_acknowledgments_required": false,
+    "firmware_comparison": "all three datasets match the historical generation"
+  }
+}

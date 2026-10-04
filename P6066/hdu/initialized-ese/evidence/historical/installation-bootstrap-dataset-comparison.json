@@ -1,0 +1,17 @@
+{
+  "K0E002": {
+    "bytes": 33280,
+    "sha256": "c9139ec93fb03de0d8cf4b4e69b6a5475a10982c383a4f6eda9a8f64ecba3153",
+    "equals_previous_successful_bootstrap": true
+  },
+  "K0E003": {
+    "bytes": 20736,
+    "sha256": "916b30780cdd194354beb7d43fe2ef1a25c474910d3bb69823249fabfb848fb2",
+    "equals_previous_successful_bootstrap": true
+  },
+  "K0E001": {
+    "bytes": 4096,
+    "sha256": "74bf31facacbc1625f31b1cc6db23136c60a78b251c8dab7074bfc156a2c950a",
+    "equals_previous_successful_bootstrap": true
+  }
+}

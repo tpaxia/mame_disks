@@ -1,0 +1,34 @@
+{
+  "ready": true,
+  "optional_startup_messages": [
+    "ERROR 154 ON UNIT FDU1",
+    "ERROR 173"
+  ],
+  "host_action": "Continue twice, after each respective startup message",
+  "operations": [
+    {
+      "op": "05",
+      "errors": "00",
+      "count": 14
+    },
+    {
+      "op": "09",
+      "errors": "00",
+      "count": 1
+    },
+    {
+      "op": "13",
+      "errors": "00",
+      "count": 1
+    }
+  ],
+  "final_emulated_seconds": 60,
+  "FD1": "empty",
+  "FD2": "SYSBTS.imd",
+  "hard1": "SYSDIS.chd",
+  "preserved_media_unchanged": {
+    "HDU2110-initialized.chd": true,
+    "SYSDIS.chd": true,
+    "SYSBTS.imd": true
+  }
+}

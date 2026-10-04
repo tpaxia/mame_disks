@@ -48,6 +48,7 @@ with the DCOS diagnostics and a utility disk. See the
 
 ## Olivetti P6066 — ESE
 
-Floppy or HDU boot, plus keyboard mapping.
+Floppy boot, [HDU initialization and ESE installation](P6066/hdu/initialized-ese/README.md),
+plus keyboard mapping.
 
 [P6066 howto](P6066/README.md).

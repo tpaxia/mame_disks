@@ -1,0 +1,53 @@
+{
+  "emulator_revision": "cd00a82cf845e08ee0a6fe884554ce55c15fa6a4 plus HDI format correction",
+  "emulator_sha256": "edc1945fc2c144ce61dc2562aca440163e786f528acd17c13b59e29868ca7276",
+  "printer": "pr6610",
+  "keyboard": "reset BASIC, unshifted alphabetic keys, main END OF LINE; no KB MODE toggle",
+  "outputs": {
+    "SYSDIS.chd": {
+      "bytes": 9940992,
+      "sha256": "eb2d207d9eebacc4d5aa7a1ea991356c804b840a34dd4b103116421057cc514e",
+      "equals_historical_container": true
+    },
+    "SYSBTS.imd": {
+      "bytes": 240894,
+      "sha256": "4a9cc4b51f118b322b001c1b50d98ba8d8f696284ec5ece1cd591976a4be3de5",
+      "equals_historical_container": false
+    }
+  },
+  "operations": [
+    {
+      "op": "05",
+      "errors": "00",
+      "count": 101
+    },
+    {
+      "op": "09",
+      "errors": "00",
+      "count": 422
+    },
+    {
+      "op": "13",
+      "errors": "00",
+      "count": 422
+    }
+  ],
+  "end_of_generation": true,
+  "firmware": {
+    "K0E002": {
+      "bytes": 33280,
+      "sha256": "c9139ec93fb03de0d8cf4b4e69b6a5475a10982c383a4f6eda9a8f64ecba3153",
+      "equals_historical_dataset": true
+    },
+    "K0E003": {
+      "bytes": 20736,
+      "sha256": "916b30780cdd194354beb7d43fe2ef1a25c474910d3bb69823249fabfb848fb2",
+      "equals_historical_dataset": true
+    },
+    "K0E001": {
+      "bytes": 4096,
+      "sha256": "74bf31facacbc1625f31b1cc6db23136c60a78b251c8dab7074bfc156a2c950a",
+      "equals_historical_dataset": true
+    }
+  }
+}

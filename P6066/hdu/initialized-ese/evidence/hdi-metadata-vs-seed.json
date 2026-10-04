@@ -1,0 +1,89 @@
+{
+  "copyright-holders": "Salvatore Paxia",
+  "comparison": "HDI physical preparation vs current create --ese-geometry payload recipe; excludes subsequent DKS/OS installation",
+  "HDI_payload_sha256": "f23dc2d0f25d41e5441017e7323eba115d98564001a7e91a80b8735c4f4b51df",
+  "seed_payload_sha256": "54ace6deac628647e7d33e7e1e6db53091a327e946a6555d420f7a8a9293e09d",
+  "fields": [
+    {
+      "field": "maintenance warning byte",
+      "absolute_offset": 1277,
+      "size": 1,
+      "seed_hex": "00",
+      "HDI_hex": "00",
+      "equal": true
+    },
+    {
+      "field": "geometry discriminator",
+      "absolute_offset": 1867,
+      "size": 1,
+      "seed_hex": "38",
+      "HDI_hex": "38",
+      "equal": true
+    },
+    {
+      "field": "user cylinders",
+      "absolute_offset": 1874,
+      "size": 3,
+      "seed_hex": "323030",
+      "HDI_hex": "323030",
+      "equal": true
+    },
+    {
+      "field": "sectors per cylinder",
+      "absolute_offset": 1877,
+      "size": 3,
+      "seed_hex": "313932",
+      "HDI_hex": "313932",
+      "equal": true
+    },
+    {
+      "field": "bytes per sector",
+      "absolute_offset": 1880,
+      "size": 3,
+      "seed_hex": "323536",
+      "HDI_hex": "323536",
+      "equal": true
+    }
+  ],
+  "all_11_seeded_bytes_match": true,
+  "representative_sectors": [
+    {
+      "cylinder": 0,
+      "sector": 4,
+      "different_bytes": 255,
+      "HDI_prefix_hex": "000000000000000000000000000000000000000000000000"
+    },
+    {
+      "cylinder": 0,
+      "sector": 5,
+      "different_bytes": 256,
+      "HDI_prefix_hex": "45524d415020202020202020202020202020202020202020"
+    },
+    {
+      "cylinder": 0,
+      "sector": 6,
+      "different_bytes": 256,
+      "HDI_prefix_hex": "202020202020202020202020202020202020202020202020"
+    },
+    {
+      "cylinder": 0,
+      "sector": 7,
+      "different_bytes": 246,
+      "HDI_prefix_hex": "000000000000000000000000000000000000000000000000"
+    },
+    {
+      "cylinder": 200,
+      "sector": 0,
+      "different_bytes": 256,
+      "HDI_prefix_hex": "200c000c000102030405060708090a0b0c0d0e0f10111213"
+    },
+    {
+      "cylinder": 201,
+      "sector": 0,
+      "different_bytes": 256,
+      "HDI_prefix_hex": "000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "CY200_all_192_service_records_match_packed_coordinate_and_ramp": true,
+  "CY0_ST7_rest": "bytes 0..79 zero except75=38; bytes80..255 retain range76..251 except82..90 geometry overrides"
+}

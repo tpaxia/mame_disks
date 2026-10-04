@@ -1,0 +1,32 @@
+{
+  "ready": true,
+  "printer": "pr6610",
+  "keyboard": "current production implementation, unchanged",
+  "operations": [
+    {
+      "op": "05",
+      "errors": "00",
+      "count": 14
+    },
+    {
+      "op": "09",
+      "errors": "00",
+      "count": 1
+    },
+    {
+      "op": "13",
+      "errors": "00",
+      "count": 1
+    }
+  ],
+  "first_ready_emulated_seconds": 19.583333333,
+  "final_emulated_seconds": 60,
+  "display_transcript": "READY\n",
+  "host_inputs": "",
+  "printed_messages": [
+    "ERROR 154 ON UNIT FDU1",
+    "ERROR 173"
+  ],
+  "console_acknowledgments_required": false,
+  "firmware_comparison": "all three datasets match the historical generation"
+}

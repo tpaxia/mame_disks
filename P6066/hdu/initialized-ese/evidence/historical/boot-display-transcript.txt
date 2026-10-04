@@ -1,0 +1,7 @@
+ERROR  154  ON UNIT FDU1
+
+?
+ERROR  173
+
+?
+READY

@@ -1,0 +1,30 @@
+{
+  "outputs": {
+    "SYSDIS.chd": {
+      "bytes": 9940992,
+      "sha256": "eb2d207d9eebacc4d5aa7a1ea991356c804b840a34dd4b103116421057cc514e"
+    },
+    "SYSBTS.imd": {
+      "bytes": 240894,
+      "sha256": "a4db09104efd7e78c83d213e8345bd4533f24294ba0afbc56e6171245818fae3"
+    }
+  },
+  "operations": [
+    {
+      "op": "05",
+      "errors": "00",
+      "count": 101
+    },
+    {
+      "op": "09",
+      "errors": "00",
+      "count": 422
+    },
+    {
+      "op": "13",
+      "errors": "00",
+      "count": 422
+    }
+  ],
+  "end_of_generation": true
+}

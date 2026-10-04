@@ -1,0 +1,54 @@
+diff --git a/docs/p6066/hdu.md b/docs/p6066/hdu.md
+index 1400a6da705..f0c2a2ca0b2 100644
+--- a/docs/p6066/hdu.md
++++ b/docs/p6066/hdu.md
+@@ -44,7 +44,9 @@ ST = head × 48 + slot. The 49th rotational slot has no normal sector ID and
+ stores no CHD payload. Both service cylinders remain addressable.
+ 
+ Successful reads supply good CRC status. Host read/write failures propagate.
+-Ordinary format commands with canonical IDs fill sectors with FF; raw CRC,
++Format commands with canonical IDs fill sectors with FF, including HDI's
++ID-only template (data marker FF) followed by ordinary data writes. Data
++markers are implicit in this abstraction. Raw CRC,
+ relocated IDs, defective sectors and incomplete-format states are not stored.
+ Malformed/noncanonical format templates are rejected. Controller transfer
+ errors are still reported, but an interrupted write does not leave a persistent
+diff --git a/scripts/puce/test_hdu_image.py b/scripts/puce/test_hdu_image.py
+index ee01073e906..9a3691ff234 100644
+--- a/scripts/puce/test_hdu_image.py
++++ b/scripts/puce/test_hdu_image.py
+@@ -68,10 +68,18 @@ int main(){
+   assert(d.record_data(h,slot,data,true));s=d.sector(h,slot);
+   assert(s.data==data&&s.cylinder==c&&s.sector==h*48+slot&&s.id_crc_valid);
+   assert(d.file[((c*4+h)*48+slot)*256]==data[0]);
++  t[17]=0xff;assert(d.record_format(h,slot,t,true));
++  s=d.sector(h,slot);assert(s.data_crc_valid);
++  assert(std::all_of(s.data.begin(),s.data.end(),[](u8 v){return v==255;}));
++  t[17]=0x54;assert(!d.record_format(h,slot,t,true));t[17]=0xff;
+   t[7]^=1;assert(!d.record_format(h,slot,t,true));
+  }
+  d.fail=true;std::array<u8,256>data{};assert(!d.record_data(0,0,data,true));
+- assert(!d.sector(0,0).data_present);d.call_unload();assert(!d.sector(0,0).id_present);
++ std::array<u8,20>t;t.fill(255);t[5]=0x55;t[6]=201;t[7]=0;
++ assert(!d.record_format(0,0,t,true));assert(!d.sector(0,0).data_present);d.fail=false;
++ assert(!d.record_format(0,0,t,false));t[5]=0xff;assert(!d.record_format(0,0,t,true));
++ t[5]=0x55;t[6]=200;assert(!d.record_format(0,0,t,true));
++ d.call_unload();assert(!d.sector(0,0).id_present);t[6]=201;assert(!d.record_format(0,0,t,true));
+  p6066_hdu_device bad;bad.geometry.cylinders=200;assert(bad.call_load().first&&!bad.ready());
+  p6066_hdu_device raw;raw.m_chd=false;assert(raw.call_load().first&&!raw.ready());
+  puts("PASS: production CHD geometry, sector IDs, addressing, service cylinders, read/write, format and errors");
+diff --git a/src/devices/bus/p6066/hdu.cpp b/src/devices/bus/p6066/hdu.cpp
+index 89460571924..7f38b4b81a5 100644
+--- a/src/devices/bus/p6066/hdu.cpp
++++ b/src/devices/bus/p6066/hdu.cpp
+@@ -55,7 +55,9 @@ bool p6066_hdu_device::record_format(unsigned head,unsigned slot,const std::arra
+  if(slot==SECTORS) return std::all_of(data.begin(),data.end(),[](u8 v){return v==0xff;});
+  // Ordinary physical formatting is allowed but unnecessary. CHD cannot
+  // represent relocated/malformed IDs or guest-supplied raw CRC templates.
+- if(data[5]!=0x55 || data[17]!=0x55 || data[6]!=m_cylinder || data[7]!=head*SECTORS+slot) return false;
++ // HDI formats canonical IDs first, leaving the data marker FF until WRITE.
++ // Data markers are implicit in the healthy-CHD model, so accept that form.
++ if(data[5]!=0x55 || (data[17]!=0x55 && data[17]!=0xff) || data[6]!=m_cylinder || data[7]!=head*SECTORS+slot) return false;
+  std::array<u8,256> blank;blank.fill(0xff);
+  return write(lba(head,slot),blank.data());
+ }
