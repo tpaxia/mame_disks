@@ -41,7 +41,7 @@ and full manual chapter/timing evidence.
 ## Fresh inputs and launch
 
 Source utility floppy, read-only:
-`/Users/paxia/Projects/L1_M30_M40/reference/images/hd-utilities/hduutilities.imd`.
+`hduutilities.imd`.
 SHA256 before/after:
 `3febce41bcc5d1bada32374bc5e38a9c06e1d7e8f508f9e1e9c86a6e48038968`.
 `utilities.imd` began as a fresh copy; startup wrote the disposable copy.

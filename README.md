@@ -29,13 +29,15 @@ The [`m20`](m20/README.md) folder contains the CP/M-8000 hard disk image, the
 CP/M-8000 boot floppy, and PCOS 4.0 system and utility floppies. Background
 and build details are in [tpaxia/CPM8000](https://github.com/tpaxia/CPM8000).
 
+See the [M20 boot instructions](m20/README.md) for PCOS hard disk boot and
+CP/M-8000 boot, including CPU selection.
+
 Boot CP/M-8000:
 
 ```sh
-mame m20 \
-  -hard1 hard\m20\m20-cpm8000.chd \
-  -bios 2 -ramsize 512k \
-  -flop1 flop\m20\REL11A.IMG
+mame m20 -bios 2 -ram 512k \
+  -hard1 /path/to/mame_disks/m20/m20-cpm8000.chd \
+  -flop1 /path/to/mame_disks/m20/REL11A.IMG
 ```
 
 Use working copies of the images if you want to keep these originals pristine.

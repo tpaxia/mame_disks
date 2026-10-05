@@ -5,10 +5,7 @@ These images exercise the M24 Z8000 adapter:
 - `pcos_m24.img`: PCOS-M24 Rev. 1.00 boot floppy.
 - `m24-blank-306-4-17.chd`: blank 10 MB hard disk, with no installed OS.
 
-Both configurations below passed boot regression testing on the MAME `sadie`
-branch. Use working copies of the images. Run the commands from your MAME
-build directory, with the M24 ROM set installed in its ROM search path.
-Set the path to your copy of this disk-image repository:
+Use working copies of the images. Set the path to this repository:
 
 ```sh
 export MAME_DISKS=/absolute/path/to/mame_disks
@@ -20,7 +17,7 @@ Boot the PCOS floppy with 640 KB RAM and remove the default hard disk
 controller from ISA slot 1:
 
 ```sh
-./mame m24 -bios v1.43 -ram 640k -isa1 "" \
+mame m24 -bios v1.43 -ram 640k -isa1 "" \
   -flop1 "$MAME_DISKS/m24/pcos_m24.img" \
   -window -skip_gameinfo -nomouse
 ```
@@ -30,14 +27,11 @@ controller from ISA slot 1:
 Keep the default controller and attach the blank CHD:
 
 ```sh
-./mame m24 -bios v1.43 -ram 640k \
+mame m24 -bios v1.43 -ram 640k \
   -hard1 "$MAME_DISKS/m24/m24-blank-306-4-17.chd" \
   -flop1 "$MAME_DISKS/m24/pcos_m24.img" \
   -window -skip_gameinfo -nomouse
 ```
-
-For a build containing only M20/M24 named `z8001reg`, replace `./mame` with
-`./z8001reg`.
 
 ## Expected result
 
