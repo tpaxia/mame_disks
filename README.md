@@ -40,6 +40,13 @@ mame m20 \
 
 Use working copies of the images if you want to keep these originals pristine.
 
+## Olivetti M24 — PCOS-M24
+
+The [`m24`](m24/README.md) folder contains the PCOS-M24 boot floppy and a
+blank hard disk image. See the [M24 regression instructions](m24/README.md)
+for floppy boot with either the hard disk controller disabled or an empty
+disk attached, using 640 KB RAM and the Z8000 adapter.
+
 ## Olivetti M40
 
 Various operating systems run on the M40: ESE, MDOS, BCOS II and MOS, along

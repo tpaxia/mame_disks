@@ -53,7 +53,8 @@ Check that PCOS-8000 4.1a reaches its `10>` prompt without a memory error.
 
 ### M24: PCOS floppy boot, controller disabled
 
-The M24 fixtures are in the sibling [`m24`](../m24/) folder.
+The M24 fixtures and standalone [regression instructions](../m24/README.md)
+are in the sibling `m24` folder.
 Boot with 640 KB RAM and remove the default ISA hard disk controller:
 
 ```sh
