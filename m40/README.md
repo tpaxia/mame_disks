@@ -253,10 +253,17 @@ Copy it into the normal `roms\m40` folder. The filename is lowercase to match
 the MAME ROM definition. SHA256:
 `f28bef7a01597e8aef1a724f3188cae771b272532a578473407cab0197b399bc`.
 
-A.5 is supplied for testing. MOS HD boot has been demonstrated using local
-provisional UC timer and GO363 common-status probes; those behaviors are
-still being investigated and are not included in the MAME source changes.
-The working launch instructions above continue to use the patched 6.0 ROM.
+With the current branch's UC042 timer and GO363 common-status fixes, this
+original ROM boots MOS 5.2.15 from the HD and completes root login without
+Lua register overrides. Use the same login sequence described above:
+
+```bat
+mame.exe m40 -bios m40-a5 -window -ram 2m -uimodekey F12 -ctrlr m40-ui -rompath roms -slot5 go363 -hard1 hard\m40\m40-mos-hd.chd
+```
+
+Work on a copy of the HD image. GO363 F9/FB currently report a healthy board;
+the complete common-register behavior and HDC505 timer diagnostics remain
+under investigation.
 
 ## Windows instructions
 
