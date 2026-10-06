@@ -23,6 +23,16 @@ mame p6066 -bus:console:goino:options printer \
   -flop1 flop\p6066\067.IMD -uimodekey F12 -window
 ```
 
+To see the printout, attach the PR 6610 thermal printer instead with
+`-bus:console:goino:options pr6610`. It adds a second screen that shows the
+paper roll as it is printed. If the paper is not visible, press Tab and pick a
+view that includes it under **Video Options**.
+
+```sh
+mame p6066 -bus:console:goino:options pr6610 \
+  -flop1 flop\p6066\067.IMD -uimodekey F12 -window
+```
+
 To run with the printer absent, leave out the `-bus:console:goino:options`
 argument. The slot then reports no installed printer.
 
