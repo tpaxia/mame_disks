@@ -241,6 +241,23 @@ HELP.
   installed system is in `m40-mos-hd.chd`.
 - BCOS companion, keyboard, and blank media are not independently bootable.
 
+## Original UC042 A.5 ROM
+
+The original PD23/PD24 pair is included as
+[`roms/m40/m40-rom-a.5`](roms/m40/m40-rom-a.5), combined into one 32 KiB
+file. It identifies itself as **REL A.5, 16 APR.85** and contains the native
+GO363/ST506 HDC5 driver. It is an original Olivetti ROM, with no HD boot patch.
+
+The current `m40_z8010_sup_test` branch recognizes it with `-bios m40-a5`.
+Copy it into the normal `roms\m40` folder. The filename is lowercase to match
+the MAME ROM definition. SHA256:
+`f28bef7a01597e8aef1a724f3188cae771b272532a578473407cab0197b399bc`.
+
+A.5 is supplied for testing. MOS HD boot has been demonstrated using local
+provisional UC timer and GO363 common-status probes; those behaviors are
+still being investigated and are not included in the MAME source changes.
+The working launch instructions above continue to use the patched 6.0 ROM.
+
 ## Windows instructions
 
 ### What it needs
