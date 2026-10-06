@@ -177,9 +177,6 @@ but READY appears without input.
 The earlier printer-absent test reported `ERROR154 ON UNIT FDU1` and then
 `ERROR173`, requiring Continue after each. That is retained as historical
 evidence, not the normal boot sequence of the configuration above.
-For everyday use, run `"$media_dir/boot-p6066.sh"`. It creates working copies
-automatically and launches this configuration. The launcher defaults to
-`~/Projects/P6066`; set `P6066_PROJECT` to use a different emulator checkout.
 
 ## Scope and evidence
 

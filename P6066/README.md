@@ -43,14 +43,17 @@ the newly installed ESE HDU and its matching bootstrap floppy, original input
 media, checksums, and complete reproduction instructions. It was generated
 and cold-booted with the current keyboard implementation and PR 6610 attached.
 
+Work on copies of `SYSDIS.chd` and `SYSBTS.imd`: the system writes to both.
+
 ```sh
-./P6066/hdu/initialized-ese/boot-p6066.sh
+mame p6066 -bus:dma rodma -bus:hdu difo -bus:console:goino:options pr6610 \
+  -hard1 hard\p6066\SYSDIS.chd -flop2 flop\p6066\SYSBTS.imd \
+  -uimodekey F12 -window
 ```
 
-Run this from the `mame_disks` repository root. The launcher uses working
-copies and defaults to the emulator in `~/Projects/P6066`. Set `P6066_PROJECT`
-for a different emulator checkout. See the package instructions for manual
-mounting and the observed startup messages.
+The HDU is on `-hard1` and the bootstrap floppy is in FD2; FD1 stays empty.
+Wait for `READY`. See the package instructions for the observed startup
+messages.
 
 ## Keyboard
 
